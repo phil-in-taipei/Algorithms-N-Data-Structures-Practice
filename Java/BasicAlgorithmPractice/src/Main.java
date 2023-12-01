@@ -1,0 +1,27 @@
+public class Main {
+    public static void main(String[] args) throws Exception {
+
+        System.out.println("----------------------------------------------------");
+
+        Calculator add = new Calculator(10, 2, "+");
+        System.out.println("10 plus 2 equals: " + add.getOutput());
+
+        System.out.println("----------------------------------------------------");
+
+        Calculator sub = new Calculator(10, 2, "-");
+        System.out.println("10 minus 2 equals: " + sub.getOutput());
+
+        System.out.println("----------------------------------------------------");
+
+        Calculator div = new Calculator(10, 2, "/");
+        System.out.println("10 divided by 2 equals: " + div.getOutput());
+
+        System.out.println("----------------------------------------------------");
+
+        Calculator mult = new Calculator(10, 2, "*");
+        System.out.println("10 times 2 equals: " + mult.getOutput());
+
+        System.out.println("----------------------------------------------------");
+
+    }
+}
