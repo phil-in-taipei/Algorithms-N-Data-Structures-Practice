@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) throws Exception {
 
@@ -30,6 +32,13 @@ public class Main {
         System.out.println("------------------------------------------------------------------------------------------");
 
         System.out.println(charVar + " occurs " + occurrences.getNumberOfOccurrences() + " times");
+        System.out.println("------------------------------------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------------------------------");
+        int[] numbers = {2, 1, 9, 16, 10 };
+        ArrayOfNumbers arrayOfNumbers = new ArrayOfNumbers(numbers);
+        System.out.println("Initializing new ArrayOfNumbers object with the numbers: " + Arrays.toString(numbers));
+        System.out.println("------------------------------------------------------------------------------------------");
+        System.out.println("The highest number is: " + arrayOfNumbers.getHighestNumber());
         System.out.println("------------------------------------------------------------------------------------------");
     }
 }
