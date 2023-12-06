@@ -25,13 +25,27 @@ public class Main {
 
         System.out.println("------------------------------------------------------------------------------------------");
         System.out.println("------------------------------------------------------------------------------------------");
-        Occurrences occurrences = new Occurrences("hellLo World", 'l');
-        char charVar = occurrences.getCharVar();
-        System.out.println("Initializing new occurrences class with string: "
-                + occurrences.getStringVar() + " and char: " + charVar);
+        StringRelatedExercises stringRelatedExercises = new StringRelatedExercises("hellLo World", 'l');
+        char charVar = stringRelatedExercises.getCharVar();
+        System.out.println("Initializing new string related class with string: "
+                + stringRelatedExercises.getStringVar() + " and char: " + charVar);
         System.out.println("------------------------------------------------------------------------------------------");
 
-        System.out.println(charVar + " occurs " + occurrences.getNumberOfOccurrences() + " times");
+        System.out.println("------------------------------------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------------------------------");
+        StringRelatedExercises stringRelatedExercises2 = new StringRelatedExercises("A man, a plan, a canal, Panama");
+        System.out.println("Initializing new occurrences class with string: "
+                + stringRelatedExercises2.getStringVar());
+        System.out.println("------------------------------------------------------------------------------------------");
+        System.out.println("This is the string reversed: " + stringRelatedExercises2.reverseString());
+        System.out.println("------------------------------------------------------------------------------------------");
+        System.out.println("This is the string in title case: " + stringRelatedExercises2.titleCase());
+        System.out.println("------------------------------------------------------------------------------------------");
+        System.out.println("The string is a palindrome: " + stringRelatedExercises2.isAPalindrome());
+        System.out.println("------------------------------------------------------------------------------------------");
+
+
+        System.out.println(charVar + " occurs " + stringRelatedExercises.getNumberOfOccurrences() + " times");
         System.out.println("------------------------------------------------------------------------------------------");
         System.out.println("------------------------------------------------------------------------------------------");
         int[] numbers = {2, 1, 9, 16, 10 };
