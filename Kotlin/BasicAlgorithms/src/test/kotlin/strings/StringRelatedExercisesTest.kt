@@ -6,13 +6,16 @@ import org.junit.jupiter.api.Assertions.*
 
 class StringRelatedExercisesTest {
 
-    val testStringEx1 = StringRelatedExercises(stringVar="hellLo World", charVar='l')
+    private val testStringEx1 = StringRelatedExercises(
+        stringVar="hellLo World", charVar='l'
+    )
 
-    val testStringEx2 = StringRelatedExercises(stringVar="A man, a plan, a canal, Panama")
+    private val testStringEx2 = StringRelatedExercises(
+        stringVar="A man, a plan, a canal, Panama"
+    )
 
     @Test
     fun capitalizeAllWordsInString() {
-        // A Man, A Plan, A Canal, Panama
         assertEquals(
             "A Man, A Plan, A Canal, Panama",
             testStringEx2.capitalizeAllWordsInString()
