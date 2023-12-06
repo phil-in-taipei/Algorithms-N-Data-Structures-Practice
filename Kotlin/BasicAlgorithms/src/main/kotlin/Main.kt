@@ -1,5 +1,6 @@
 import calculator.Calculator
 import numbers.ArrayOfNumbers
+import strings.StringRelatedExercises
 
 fun main(args: Array<String>) {
     println("----------------------------------------------------------------------------------------------")
@@ -20,4 +21,36 @@ fun main(args: Array<String>) {
     println("----------------------------------------------------------------------------------------------")
     println("The highest value is ${arrayOfNumbers.getHighestNumber()}")
     println("----------------------------------------------------------------------------------------------")
+
+    println("----------------------------------------------------------------------------------------------")
+    println("Initializing strings class with values 'hellLo world' and 'l'")
+    val testStringEx1 = StringRelatedExercises(stringVar="hellLo World", charVar='l')
+    println("----------------------------------------------------------------------------------------------")
+    println("The string value is ${testStringEx1.getStringVar()}")
+    println("----------------------------------------------------------------------------------------------")
+    println("The string value reversed is ${testStringEx1.reverseString()}")
+    println("----------------------------------------------------------------------------------------------")
+    println("The string value is a palindrome: ${testStringEx1.isAPalindrome()}")
+    println("----------------------------------------------------------------------------------------------")
+    println("The char value is ${testStringEx1.getCharVar()}")
+    println("----------------------------------------------------------------------------------------------")
+    println("The char value occurs ${testStringEx1.getNumberOfOccurrences()} times in the string: ${testStringEx1.getStringVar()}")
+    println("----------------------------------------------------------------------------------------------")
+
+    println("----------------------------------------------------------------------------------------------")
+    println("Initializing strings class with values 'A man, a plan, a canal, Panama'")
+    val testStringEx2 = StringRelatedExercises(stringVar="A man, a plan, a canal, Panama")
+    println("----------------------------------------------------------------------------------------------")
+    println("The string value is ${testStringEx2.getStringVar()}")
+    println("----------------------------------------------------------------------------------------------")
+    println("The string value capitalized is ${testStringEx2.capitalizeAllWordsInString()}")
+    println("----------------------------------------------------------------------------------------------")
+    println("The string value reversed is ${testStringEx2.reverseString()}")
+    println("----------------------------------------------------------------------------------------------")
+    println("The string value is a palindrome: ${testStringEx2.isAPalindrome()}")
+    println("----------------------------------------------------------------------------------------------")
+    println("The char value is ${testStringEx2.getCharVar()}")
+    println("----------------------------------------------------------------------------------------------")
+
+
 }
