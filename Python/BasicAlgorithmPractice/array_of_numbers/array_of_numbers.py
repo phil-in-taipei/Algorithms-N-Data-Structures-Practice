@@ -9,3 +9,11 @@ class ListOfNumbers:
                 max_value = self.numbers[i]
         return max_value
 
+    def remove_duplicates(self):
+        non_duplicates = []
+        for i in range(0, len(self.numbers)):
+            if self.numbers[i] not in non_duplicates:
+                non_duplicates.append(self.numbers[i])
+        return non_duplicates
+
+
