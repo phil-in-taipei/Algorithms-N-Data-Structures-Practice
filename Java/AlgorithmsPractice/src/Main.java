@@ -1,4 +1,7 @@
 import arrayIntersection.ArrayIntersection;
+import fizzbuzz.FizzBuzz;
+
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,13 +14,16 @@ public class Main {
         System.out.println(arrayIntersection.getCommonItems());
         System.out.println("--------------------------------------------------------------------------------------------");
 
-
+        System.out.println("Initializing Fizzbuzz object to get items up to 15");
+        FizzBuzz fizzBuzz = new FizzBuzz(15);
         System.out.println("--------------------------------------------------------------------------------------------");
 
-
+        System.out.println("Resulting array:");
         System.out.println("--------------------------------------------------------------------------------------------");
-
-
+        ArrayList<String> fizzBuzzResult = fizzBuzz.getFizzbuzz();
+        for (String item : fizzBuzzResult) {
+            System.out.println(item);
+        }
         System.out.println("--------------------------------------------------------------------------------------------");
 
     }
