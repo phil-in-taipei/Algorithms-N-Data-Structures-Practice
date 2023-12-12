@@ -1,5 +1,6 @@
 import arrayIntersection.ArrayIntersection;
 import fizzbuzz.FizzBuzz;
+import numberofLikes.NumberOfLikes;
 
 import java.util.ArrayList;
 
@@ -25,6 +26,32 @@ public class Main {
             System.out.println(item);
         }
         System.out.println("--------------------------------------------------------------------------------------------");
-
+        System.out.println("Now initializing a NumberOfLikes object");
+        NumberOfLikes numberOfLikes1 = new NumberOfLikes(new String[]{"Ding-Dong", "Bling-Blong", "Schling-Schlong", "Garry"});
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("This is the output of likes: " + numberOfLikes1.getNumberOfLikes());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Now initializing a NumberOfLikes object");
+        NumberOfLikes numberOfLikes2 = new NumberOfLikes(new String[]{"Schling-Schlong", "Garry"});
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("This is the output of likes: " + numberOfLikes2.getNumberOfLikes());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Now initializing a NumberOfLikes object");
+        NumberOfLikes numberOfLikes3 = new NumberOfLikes(new String[]{"Bling-Blong", "Schling-Schlong", "Garry"});
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("This is the output of likes: " + numberOfLikes3.getNumberOfLikes());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Now initializing a NumberOfLikes object");
+        NumberOfLikes numberOfLikes4 = new NumberOfLikes(new String[]{"Bling-Blong"});
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("This is the output of likes: " + numberOfLikes4.getNumberOfLikes());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Now initializing a NumberOfLikes object");
+        NumberOfLikes numberOfLikes5 = new NumberOfLikes(new String[]{});
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("This is the output of likes: " + numberOfLikes5.getNumberOfLikes());
+        System.out.println("--------------------------------------------------------------------------------------------");
     }
 }
