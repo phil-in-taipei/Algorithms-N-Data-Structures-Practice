@@ -1,5 +1,6 @@
 from fizzbuzz.fizzbuzz import Fizzbuzz
 from array_intersection.array_intersection import ArrayIntersection
+from display_likes.display_likes import DisplayLikes
 
 
 if __name__ == '__main__':
@@ -20,9 +21,38 @@ if __name__ == '__main__':
 	ai_result = array_intersection_object.get_list_of_values_in_both_lists()
 	print(ai_result)
 	print("-----------------------------------------------------------------------------------------------")
-
 	print("-----------------------------------------------------------------------------------------------")
-
+	print("-----------------------------------------------------------------------------------------------")
+	print("Initializing object to test for likes message")
+	print("-----------------------------------------------------------------------------------------------")
+	display_likes_object1 = DisplayLikes(["Bob"])
+	print("-----------------------------------------------------------------------------------------------")
+	print("This is the likes message: " + display_likes_object1.get_message())
+	print("-----------------------------------------------------------------------------------------------")
+	print("Initializing object to test for likes message")
+	print("-----------------------------------------------------------------------------------------------")
+	display_likes_object2 = DisplayLikes(["Bob", "Dana"])
+	print("-----------------------------------------------------------------------------------------------")
+	print("This is the likes message: " + display_likes_object2.get_message())
+	print("-----------------------------------------------------------------------------------------------")
+	print("Initializing object to test for likes message")
+	print("-----------------------------------------------------------------------------------------------")
+	display_likes_object3 = DisplayLikes(["Bob", "Alice", "Dana"])
+	print("-----------------------------------------------------------------------------------------------")
+	print("This is the likes message: " + display_likes_object3.get_message())
+	print("-----------------------------------------------------------------------------------------------")
+	print("Initializing object to test for likes message")
+	print("-----------------------------------------------------------------------------------------------")
+	display_likes_object4 = DisplayLikes(["Bob", "Alice", "Dana", "Louisa"])
+	print("-----------------------------------------------------------------------------------------------")
+	print("This is the likes message: " + display_likes_object4.get_message())
+	print("-----------------------------------------------------------------------------------------------")
+	print("Initializing object to test for likes message")
+	print("-----------------------------------------------------------------------------------------------")
+	display_likes_object5 = DisplayLikes([])
+	print("-----------------------------------------------------------------------------------------------")
+	print("This is the likes message: " + display_likes_object5.get_message())
+	print("-----------------------------------------------------------------------------------------------")
 
 
 
