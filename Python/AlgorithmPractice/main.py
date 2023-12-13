@@ -1,6 +1,7 @@
 from fizzbuzz.fizzbuzz import Fizzbuzz
 from array_intersection.array_intersection import ArrayIntersection
 from display_likes.display_likes import DisplayLikes
+from all_chars_unique.all_chars_unique import AllCharsAreUnique
 
 
 if __name__ == '__main__':
@@ -52,6 +53,20 @@ if __name__ == '__main__':
 	display_likes_object5 = DisplayLikes([])
 	print("-----------------------------------------------------------------------------------------------")
 	print("This is the likes message: " + display_likes_object5.get_message())
+	print("-----------------------------------------------------------------------------------------------")
+	print("Initializing object to test for likes message")
+	print("-----------------------------------------------------------------------------------------------")
+	all_chars_are_unique1 = AllCharsAreUnique("bigbang")
+	print("-----------------------------------------------------------------------------------------------")
+	print("All of the characters in 'bigbang' are unique : " + str(all_chars_are_unique1.get_verdict()))
+	print("-----------------------------------------------------------------------------------------------")
+	all_chars_are_unique2 = AllCharsAreUnique("sunray")
+	print("-----------------------------------------------------------------------------------------------")
+	print("All of the characters in 'sunray' are unique : " + str(all_chars_are_unique2.get_verdict()))
+	print("-----------------------------------------------------------------------------------------------")
+	all_chars_are_unique3 = AllCharsAreUnique("")
+	print("-----------------------------------------------------------------------------------------------")
+	print("All of the characters in empty string are unique : " + str(all_chars_are_unique3.get_verdict()))
 	print("-----------------------------------------------------------------------------------------------")
 
 
