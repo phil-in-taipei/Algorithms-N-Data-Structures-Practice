@@ -1,3 +1,21 @@
-function areAllCharactersUnique() {}
+function areAllCharactersUnique(inputString) {
+    // Step 1: convert the string to an array of characters
+    const stringAsArray = inputString.split("");
+
+    // Step 2: iterate through the array of characters
+    for (let i = 0; i < stringAsArray.length; i++) {
+
+        // Step 3: using a filter create a subarray consisting only of chars 
+        //         which are the same as the char at that index
+        // Step 4: Find if the length that subarray is greater than one. 
+        //         If so, return false
+        if (stringAsArray.filter(char => char === stringAsArray[i]).length > 1) {
+            return false;
+        }
+    }
+    // Having iterated through the array, each subarray did not have a length greater than one
+    return true;
+}
+
 
 module.exports = areAllCharactersUnique;
