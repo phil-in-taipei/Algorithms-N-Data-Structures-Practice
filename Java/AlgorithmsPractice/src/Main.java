@@ -1,6 +1,7 @@
 import arrayIntersection.ArrayIntersection;
 import fizzbuzz.FizzBuzz;
 import numberofLikes.NumberOfLikes;
+import findMissing.FindMissingNumber;
 
 import java.util.ArrayList;
 
@@ -52,6 +53,18 @@ public class Main {
         NumberOfLikes numberOfLikes5 = new NumberOfLikes(new String[]{});
         System.out.println("--------------------------------------------------------------------------------------------");
         System.out.println("This is the output of likes: " + numberOfLikes5.getNumberOfLikes());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Now initializing a Find Missing Number object with nothing in the array");
+        FindMissingNumber findMissingNumber1 = new FindMissingNumber(new int[]{});
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("This is the missing number: " + findMissingNumber1.getResult());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Now initializing a Find Missing Number object with nothing in the array");
+        FindMissingNumber findMissingNumber2 = new FindMissingNumber(new int[]{10, 8, 6, 7, 5, 4, 2, 3, 1});
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("This is the missing number: " + findMissingNumber2.getResult());
+        System.out.println("--------------------------------------------------------------------------------------------");
         System.out.println("--------------------------------------------------------------------------------------------");
     }
 }
