@@ -3,6 +3,7 @@ from array_intersection.array_intersection import ArrayIntersection
 from display_likes.display_likes import DisplayLikes
 from all_chars_unique.all_chars_unique import AllCharsAreUnique
 from find_missing_number.find_missing_number import FindMissingNumber
+from find_missing_letter.find_missing_letter import FindMissingLetter
 
 if __name__ == '__main__':
 	print("-----------------------------------------------------------------------------------------------")
@@ -73,5 +74,23 @@ if __name__ == '__main__':
 	all_chars_are_unique3 = AllCharsAreUnique("")
 	print("-----------------------------------------------------------------------------------------------")
 	print("All of the characters in empty string are unique : " + str(all_chars_are_unique3.get_verdict()))
+	print("-----------------------------------------------------------------------------------------------")
+	print("Initializing object to find missing letter in 'c, d, e, g, h, i' sequence")
+	print("-----------------------------------------------------------------------------------------------")
+	find_missing_letter1 = FindMissingLetter(['c', 'd', 'e', 'g', 'h', 'i'])
+	print("-----------------------------------------------------------------------------------------------")
+	print("The missing letter is : " + find_missing_letter1.get_missing_letter())
+	print("-----------------------------------------------------------------------------------------------")
+	print("Initializing object to find missing letter in 'M, N, P, Q, R, S, T' sequence")
+	print("-----------------------------------------------------------------------------------------------")
+	find_missing_letter2 = FindMissingLetter(['M', 'N', 'P', 'Q', 'R', 'S', 'T'])
+	print("-----------------------------------------------------------------------------------------------")
+	print("The missing letter is : " + find_missing_letter2.get_missing_letter())
+	print("-----------------------------------------------------------------------------------------------")
+	print("Initializing object to find missing letter in empty list")
+	print("-----------------------------------------------------------------------------------------------")
+	find_missing_letter3 = FindMissingLetter([])
+	print("-----------------------------------------------------------------------------------------------")
+	print("The missing letter is : " + find_missing_letter3.get_missing_letter())
 	print("-----------------------------------------------------------------------------------------------")
 
