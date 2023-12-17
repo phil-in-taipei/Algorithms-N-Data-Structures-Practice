@@ -2,7 +2,7 @@ from fizzbuzz.fizzbuzz import Fizzbuzz
 from array_intersection.array_intersection import ArrayIntersection
 from display_likes.display_likes import DisplayLikes
 from all_chars_unique.all_chars_unique import AllCharsAreUnique
-
+from find_missing_number.find_missing_number import FindMissingNumber
 
 if __name__ == '__main__':
 	print("-----------------------------------------------------------------------------------------------")
@@ -16,12 +16,18 @@ if __name__ == '__main__':
 	print("Initializing object to test for common values in two lists")
 	print("-----------------------------------------------------------------------------------------------")
 	array_intersection_object = ArrayIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7])
-
 	print("-----------------------------------------------------------------------------------------------")
 	print("This is the result of the array intersection:")
 	ai_result = array_intersection_object.get_list_of_values_in_both_lists()
 	print(ai_result)
 	print("-----------------------------------------------------------------------------------------------")
+	print("-----------------------------------------------------------------------------------------------")
+	print("Initializing object to find missing number in list of consecutive ascending integers (1 through 7)")
+	print("-----------------------------------------------------------------------------------------------")
+	find_missing_number_obj1 = FindMissingNumber([1, 2, 3, 4, 5, 7])
+	print("-----------------------------------------------------------------------------------------------")
+	print("This is the missing number result:")
+	print(find_missing_number_obj1.get_missing_number())
 	print("-----------------------------------------------------------------------------------------------")
 	print("-----------------------------------------------------------------------------------------------")
 	print("Initializing object to test for likes message")
@@ -68,6 +74,4 @@ if __name__ == '__main__':
 	print("-----------------------------------------------------------------------------------------------")
 	print("All of the characters in empty string are unique : " + str(all_chars_are_unique3.get_verdict()))
 	print("-----------------------------------------------------------------------------------------------")
-
-
 
