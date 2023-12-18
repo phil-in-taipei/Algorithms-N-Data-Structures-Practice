@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8953f2b6-1ec7-4233-8a30-fd5360c03920" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AlgorithmPractice/find_missing_letter/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AlgorithmPractice/find_missing_letter/find_missing_letter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AlgorithmPractice/find_missing_letter/test_find_missing_letter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlgorithmPractice/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/AlgorithmPractice/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="8953f2b6-1ec7-4233-8a30-fd5360c03920" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
