@@ -4,6 +4,8 @@ from display_likes.display_likes import DisplayLikes
 from all_chars_unique.all_chars_unique import AllCharsAreUnique
 from find_missing_number.find_missing_number import FindMissingNumber
 from find_missing_letter.find_missing_letter import FindMissingLetter
+from dice_game.dice_game import DiceGame
+
 
 if __name__ == '__main__':
 	print("-----------------------------------------------------------------------------------------------")
@@ -93,4 +95,11 @@ if __name__ == '__main__':
 	print("-----------------------------------------------------------------------------------------------")
 	print("The missing letter is : " + find_missing_letter3.get_missing_letter())
 	print("-----------------------------------------------------------------------------------------------")
+	print("Initializing dice game to roll 10 times")
+	dice_game_results = DiceGame(10).getResults()
+	print("-----------------------------------------------------------------------------------------------")
+	print("These are the results:")
+	for d in dice_game_results:
+		print(d)
+	print("----------------------------------------------------------------------------------------------")
 
