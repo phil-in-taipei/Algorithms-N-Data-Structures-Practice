@@ -5,6 +5,7 @@ from all_chars_unique.all_chars_unique import AllCharsAreUnique
 from find_missing_number.find_missing_number import FindMissingNumber
 from find_missing_letter.find_missing_letter import FindMissingLetter
 from dice_game.dice_game import DiceGame
+from validate_email.validate import Validate
 
 
 if __name__ == '__main__':
@@ -102,4 +103,15 @@ if __name__ == '__main__':
 	for d in dice_game_results:
 		print(d)
 	print("----------------------------------------------------------------------------------------------")
-
+	print("-----------------------------------------------------------------------------------------------")
+	print("Initializing validate class to validate the email: 'sweeney.phil@gmx.com'")
+	validation_result_1 = Validate("sweeney.phil@gmx.com")
+	print("-----------------------------------------------------------------------------------------------")
+	print("This is the result:" + str(validation_result_1.validate_email()))
+	print("-----------------------------------------------------------------------------------------------")
+	print("-----------------------------------------------------------------------------------------------")
+	print("Initializing validate class to validate the incorrect email: 'iamnotavalidemail'")
+	validation_result_2 = Validate("iamnotavalidemail")
+	print("-----------------------------------------------------------------------------------------------")
+	print("This is the result:" + str(validation_result_2.validate_email()))
+	print("------------------------------------------------------------------------------------------------")

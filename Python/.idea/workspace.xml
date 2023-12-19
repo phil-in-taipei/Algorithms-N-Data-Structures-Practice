@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8953f2b6-1ec7-4233-8a30-fd5360c03920" name="Changes" comment="" />
+    <list default="true" id="8953f2b6-1ec7-4233-8a30-fd5360c03920" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AlgorithmPractice/validate_email/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlgorithmPractice/validate_email/test_validate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlgorithmPractice/validate_email/validate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlgorithmPractice/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/AlgorithmPractice/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +38,7 @@
   "keyToString": {
     "Python tests.Python tests for dice_game.test_dice_game.TestDiceGame.executor": "Run",
     "Python tests.Python tests for test_find_missing_letter.TestFindMissingLetter.executor": "Run",
+    "Python tests.Python tests for validate_email.test_validate.TestValidate.executor": "Run",
     "Python tests.Python tests in test_find_missing_number.py.executor": "Run",
     "Python.main.executor": "Run",
     "Python.test_find_missing_number.executor": "Run",
@@ -41,7 +48,7 @@
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.Python tests for dice_game.test_dice_game.TestDiceGame">
+  <component name="RunManager" selected="Python tests.Python tests for validate_email.test_validate.TestValidate">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="ENV_FILES" value="" />
@@ -117,10 +124,26 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for validate_email.test_validate.TestValidate" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AlgorithmPractice" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;validate_email.test_validate.TestValidate&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for dice_game.test_dice_game.TestDiceGame" />
+        <item itemvalue="Python tests.Python tests for validate_email.test_validate.TestValidate" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Python tests for dice_game.test_dice_game.TestDiceGame" />
         <item itemvalue="Python tests.Python tests for test_find_missing_letter.TestFindMissingLetter" />
       </list>
     </recent_temporary>
