@@ -19,9 +19,11 @@ function findMissingLetter(arrayOfLetters) {
 function findMissingLetter(arr) {
     let previousCode = arr[0].charCodeAt(0); // starts with the code of the first array
     const missingCharCode = arr.slice(1) // start from 2nd item in array
-      .map((char) => { return char.charCodeAt(0)})
+      .map((char) => { 
+        //console.log(`This is the char: ${char}`)
+        return char.charCodeAt(0) })
       .find((current) => {
-        console.log(`This is the difference: ${current - previousCode}`)
+        //console.log(`This is the difference: ${current - previousCode}`)
         if (current - previousCode > 1) {
           return true;
         }
