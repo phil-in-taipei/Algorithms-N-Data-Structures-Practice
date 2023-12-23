@@ -4,6 +4,7 @@ import calculateSalesAmount.*
 import java.math.BigDecimal
 import kotlin.collections.ArrayList
 import highestScoringWord.HighestScoringWord
+import anagrams.AnagramValidation
 
 fun main() {
     val print = Print();
@@ -41,4 +42,11 @@ fun main() {
             "${highestScoringWord.getHighestScoringWord()}"
     )
     print.printDividerLine()
+    print.printDividerLine()
+    print.printInitializationAnnouncement("AnagramValidation")
+    val anagramValidation = AnagramValidation("app", "ppa")
+    print.printDividerLine()
+    println("The strings, 'app' and 'ppa' are anagrams: ${anagramValidation.validateByMeansOfStringComparison()}")
+    print.printDividerLine()
+    println("The strings 'app' and 'ppa' are anagrams: ${anagramValidation.validateByMeansOfMapComparison()}")
 }
