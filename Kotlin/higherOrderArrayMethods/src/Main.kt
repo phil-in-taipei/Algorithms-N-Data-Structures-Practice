@@ -3,6 +3,7 @@ import utilities.Print
 import calculateSalesAmount.*
 import java.math.BigDecimal
 import kotlin.collections.ArrayList
+import highestScoringWord.HighestScoringWord
 
 fun main() {
     val print = Print();
@@ -23,10 +24,21 @@ fun main() {
             "${arrayOfIntegers.getFirstIntegerGreaterThanThreeOrNull()}")
     print.printDividerLine()
     print.printInitializationAnnouncement("SalesCalculations")
-    var arraylist = ArrayList<SalesTransaction>()
+    val arraylist = ArrayList<SalesTransaction>()
     arraylist.add(SalesTransaction(name="Apple", price= BigDecimal(0.5), quantity = 10))
     arraylist.add(SalesTransaction(name="Banana", price= BigDecimal(0.3), quantity = 20))
     arraylist.add(SalesTransaction(name="Orange", price= BigDecimal(0.6), quantity = 15))
-    var calculations = SalesCalculations(arraylist, BigDecimal(8))
+    val calculations = SalesCalculations(arraylist, BigDecimal(8))
     println(calculations.calculateTotalPrices())
+    print.printDividerLine()
+    print.printDividerLine()
+    print.printInitializationAnnouncement("HighestScoringWord")
+    print.printDividerLine()
+
+    val highestScoringWord = HighestScoringWord("Hello my name is xavier")
+    println("The highest scoring word in the string, " +
+            "'Hello my name is xavier' is " +
+            "${highestScoringWord.getHighestScoringWord()}"
+    )
+    print.printDividerLine()
 }
