@@ -8,8 +8,11 @@ class SalesCalculations(
     private val taxRate: BigDecimal
 ) {
     fun calculateTotalPrices(): BigDecimal {
-        var totalSales = salesTransactions.map { it.price * BigDecimal(it.quantity) }.reduce { acc, value -> acc + value }
-        totalSales = totalSales.setScale(1, RoundingMode.HALF_EVEN)
+        var totalSales = salesTransactions
+                                .map { it.price * BigDecimal(it.quantity) }
+                                .reduce { acc, value -> acc + value }
+
+        totalSales = totalSales.setScale(2, RoundingMode.HALF_EVEN)
         return totalSales + (totalSales * taxRate) / BigDecimal(100);
     }
 }
