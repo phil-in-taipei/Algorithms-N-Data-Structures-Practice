@@ -12,7 +12,7 @@ class SalesCalculationsTest {
             SalesTransaction(name="Apple", price= BigDecimal(0.5), quantity = 10),
             SalesTransaction(name="Banana", price= BigDecimal(0.3), quantity = 20),
             SalesTransaction(name="Orange", price= BigDecimal(0.6), quantity = 15)),
-        BigDecimal(8)
+        taxRate=BigDecimal(8)
     )
 
     private var calculations2 = SalesCalculations(
@@ -21,21 +21,21 @@ class SalesCalculationsTest {
             SalesTransaction(name="Chips", price= BigDecimal(1.2), quantity = 10),
             SalesTransaction(name="Soda", price= BigDecimal(1.0), quantity = 8),
             SalesTransaction(name="Candy", price= BigDecimal(0.5), quantity = 15)),
-        BigDecimal(5)
+        taxRate=BigDecimal(5)
     )
 
 
 
 
     @org.junit.jupiter.api.Test
-    fun calculateTotalPrices() {
+    fun calculateTotalSalesWithTax() {
         assertEquals(
             BigDecimal(21.60).setScale(2, RoundingMode.HALF_EVEN),
-            calculations1.calculateTotalPrices()
+            calculations1.calculateTotalSalesWithTax()
         )
         assertEquals(
             BigDecimal(42).setScale(2, RoundingMode.HALF_EVEN),
-            calculations2.calculateTotalPrices()
+            calculations2.calculateTotalSalesWithTax()
         )
 
     }

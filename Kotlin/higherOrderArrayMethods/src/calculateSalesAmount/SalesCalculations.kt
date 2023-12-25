@@ -7,7 +7,7 @@ class SalesCalculations(
     private val salesTransactions: ArrayList<SalesTransaction>,
     private val taxRate: BigDecimal
 ) {
-    fun calculateTotalPrices(): BigDecimal {
+    fun calculateTotalSalesWithTax(): BigDecimal {
         var totalSales = salesTransactions
                                 .map { it.price * BigDecimal(it.quantity) }
                                 .reduce { acc, value -> acc + value }

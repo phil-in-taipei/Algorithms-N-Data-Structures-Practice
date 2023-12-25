@@ -30,7 +30,7 @@ fun main() {
     arraylist.add(SalesTransaction(name="Banana", price= BigDecimal(0.3), quantity = 20))
     arraylist.add(SalesTransaction(name="Orange", price= BigDecimal(0.6), quantity = 15))
     val calculations = SalesCalculations(arraylist, BigDecimal(8))
-    println(calculations.calculateTotalPrices())
+    println(calculations.calculateTotalSalesWithTax())
     print.printDividerLine()
     print.printDividerLine()
     print.printInitializationAnnouncement("HighestScoringWord")
