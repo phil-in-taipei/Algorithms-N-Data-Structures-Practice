@@ -1,3 +1,4 @@
+import Anagrams.AnagramValidation;
 import ArrayListPractice.ArrayListOfIntegers;
 import CalculateSales.CalculateSales;
 import CalculateSales.SalesTransaction;
@@ -32,6 +33,15 @@ public class Main {
         System.out.println("--------------------------------------------------------------------------------------------");
         System.out.println("The sales total is: " + calculateSales.calculateTotalSalesWithTax());
         System.out.println("--------------------------------------------------------------------------------------------");
-
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Initializing a anagram validation object with the words: 'app' and 'ppa'");
+        System.out.println("--------------------------------------------------------------------------------------------");
+        AnagramValidation anagramValidation = new AnagramValidation("app", "ppa");
+        System.out.println("String comparison shows are anagrams: "
+                + anagramValidation.validateByMeansOfStringComparison());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Word count map comparison shows are anagrams: "
+                + anagramValidation.validateByMeansOfMapComparison());
+        System.out.println("--------------------------------------------------------------------------------------------");
     }
 }
