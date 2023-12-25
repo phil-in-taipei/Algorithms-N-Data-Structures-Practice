@@ -7,15 +7,16 @@ import java.util.stream.Collectors;
 
 public class ArrayListOfIntegers {
 
-    ArrayList<Integer> integers = new ArrayList<Integer>();
+    ArrayList<Integer> integers;// = new ArrayList<Integer>();
 
     public ArrayListOfIntegers(ArrayList<Integer> integers) {
         this.integers = integers;
     }
 
     public List<Integer> squareListArrayValues() {
-        Function<Integer, Integer> square = x -> x * x;
-        return this.integers.stream().map(square)
+        //Function<Integer, Integer> square = x -> x * x;
+        return this.integers.stream()
+                .map(x -> x * x) // previously used square function (above)
                 .collect(Collectors.toList());
     }
 
