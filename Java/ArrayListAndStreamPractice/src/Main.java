@@ -2,6 +2,8 @@ import Anagrams.AnagramValidation;
 import ArrayListPractice.ArrayListOfIntegers;
 import CalculateSales.CalculateSales;
 import CalculateSales.SalesTransaction;
+import WordCount.HighestScoringWord;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,6 +44,13 @@ public class Main {
         System.out.println("--------------------------------------------------------------------------------------------");
         System.out.println("Word count map comparison shows are anagrams: "
                 + anagramValidation.validateByMeansOfMapComparison());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Initializing a anagram validation object with the words: 'app' and 'ppa'");
+        System.out.println("--------------------------------------------------------------------------------------------");
+        HighestScoringWord highestScoringWord = new HighestScoringWord("Hello my name is xavier");
+        System.out.println("The highest scoring word in the string, 'Hello my name is xavier' is: " +
+                    highestScoringWord.getHighestScoringWord());
         System.out.println("--------------------------------------------------------------------------------------------");
     }
 }
