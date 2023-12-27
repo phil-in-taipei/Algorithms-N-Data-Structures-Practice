@@ -3,6 +3,7 @@ from sum_up_to.sum_up_to import CumulativeSumUpToNumber
 from reverse_string.reverse_string import RecursivelyReverseString
 from fibonacci.fibonacci import FibonacciViaRecursion
 from factorial.factorial import FactorialViaRecursion
+from calculate_number_to_power.calculate_number_to_power_of import PowerOfRecursive
 
 
 def print_intro(name_of_class):
@@ -50,6 +51,14 @@ if __name__ == '__main__':
         f"value of: {factorial.get_of_number()}"
     )
     print(factorial.get_output())
+    print_divider_line()
+    print_divider_line()
+    power = PowerOfRecursive(number=2, to_power_of=3)
+    print(
+        f"Attempting to apply recursion to calculate {power.get_number()} "
+        f"to the power of: {power.get_to_power_of()}"
+    )
+    print(f"This result is: {power.get_result()}")
     print_divider_line()
 
 
