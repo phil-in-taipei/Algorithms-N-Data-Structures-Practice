@@ -4,6 +4,7 @@ from reverse_string.reverse_string import RecursivelyReverseString
 from fibonacci.fibonacci import FibonacciViaRecursion
 from factorial.factorial import FactorialViaRecursion
 from calculate_number_to_power.calculate_number_to_power_of import PowerOfRecursive
+from calculate_sum_of_number_in_list.calculate_sum_of_numbers_in_list import CalculateSumOfListNumbersRecursively
 
 
 def print_intro(name_of_class):
@@ -60,5 +61,12 @@ if __name__ == '__main__':
     )
     print(f"This result is: {power.get_result()}")
     print_divider_line()
-
+    print_divider_line()
+    list_of_numbers = CalculateSumOfListNumbersRecursively(list_of_numbers=[1, 2, 3, 4, 5])
+    print(
+        f"Attempting to apply recursion to calculate the sum of this list: "
+        f"[1, 2, 3, 4, 5]"
+    )
+    print(f"The result is: {list_of_numbers.get_sum()}")
+    print_divider_line()
 
