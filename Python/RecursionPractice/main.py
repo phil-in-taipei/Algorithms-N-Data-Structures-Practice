@@ -5,6 +5,7 @@ from fibonacci.fibonacci import FibonacciViaRecursion
 from factorial.factorial import FactorialViaRecursion
 from calculate_number_to_power.calculate_number_to_power_of import PowerOfRecursive
 from calculate_sum_of_number_in_list.calculate_sum_of_numbers_in_list import CalculateSumOfListNumbersRecursively
+from generate_list_in_number_range.generate_list_in_number_range import GenerateListInNumberRangeRecursively
 
 
 def print_intro(name_of_class):
@@ -38,6 +39,7 @@ if __name__ == '__main__':
     print(reverse_string.get_output())
     print_divider_line()
     print_divider_line()
+    print_intro("FibonacciViaRecursion")
     fibonacci = FibonacciViaRecursion(7)
     print(
         f"Attempting to apply recursion to calculate fibonacci "
@@ -45,6 +47,8 @@ if __name__ == '__main__':
     )
     print(fibonacci.get_value_at_index())
     print_divider_line()
+    print_divider_line()
+    print_intro("FactorialViaRecursion")
     print_divider_line()
     factorial = FactorialViaRecursion(of_number=5)
     print(
@@ -54,6 +58,8 @@ if __name__ == '__main__':
     print(factorial.get_output())
     print_divider_line()
     print_divider_line()
+    print_intro("PowerOfRecursive")
+    print_divider_line()
     power = PowerOfRecursive(number=2, to_power_of=3)
     print(
         f"Attempting to apply recursion to calculate {power.get_number()} "
@@ -62,11 +68,23 @@ if __name__ == '__main__':
     print(f"This result is: {power.get_result()}")
     print_divider_line()
     print_divider_line()
+    print_intro("CalculateSumOfListNumbersRecursively")
+    print_divider_line()
     list_of_numbers = CalculateSumOfListNumbersRecursively(list_of_numbers=[1, 2, 3, 4, 5])
     print(
         f"Attempting to apply recursion to calculate the sum of this list: "
         f"[1, 2, 3, 4, 5]"
     )
     print(f"The result is: {list_of_numbers.get_sum()}")
+    print_divider_line()
+    print_divider_line()
+    print_intro("GenerateListInNumberRangeRecursively")
+    print_divider_line()
+    numbers_in_range = GenerateListInNumberRangeRecursively(start_number=5, finish_number=15)
+    print(
+        f"Attempting to apply recursion to generate a list of numbers between: "
+        f"5 and 15"
+    )
+    print(f"The result is: {numbers_in_range.get_list_of_numbers()}")
     print_divider_line()
 
