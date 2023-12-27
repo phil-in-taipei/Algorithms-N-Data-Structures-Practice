@@ -1,6 +1,8 @@
 from count_down.count_down import CountdownRecursive
 from sum_up_to.sum_up_to import CumulativeSumUpToNumber
 from reverse_string.reverse_string import RecursivelyReverseString
+from fibonacci.fibonacci import FibonacciViaRecursion
+
 
 def print_intro(name_of_class):
     print(f'Initialization of {name_of_class} object')
@@ -32,6 +34,13 @@ if __name__ == '__main__':
     print("Attempting recursion to reverse the string: python")
     print(reverse_string.get_output())
     print_divider_line()
-
+    print_divider_line()
+    fibonacci = FibonacciViaRecursion(7)
+    print(
+        f"Attempting to apply recursion to calculate fibonacci "
+        f"value at index: {fibonacci.get_sequence_index()}"
+    )
+    print(fibonacci.get_value_at_index())
+    print_divider_line()
 
 
