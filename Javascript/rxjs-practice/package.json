@@ -1,0 +1,15 @@
+{
+  "name": "rxjs-practice",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Practice implementing algorithms using rxjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Phil Sweeney",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^7.8.1"
+  }
+}
