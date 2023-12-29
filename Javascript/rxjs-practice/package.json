@@ -5,11 +5,20 @@
   "description": "Practice implementing algorithms using rxjs",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "author": "Phil Sweeney",
   "license": "ISC",
   "dependencies": {
     "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
   }
 }
