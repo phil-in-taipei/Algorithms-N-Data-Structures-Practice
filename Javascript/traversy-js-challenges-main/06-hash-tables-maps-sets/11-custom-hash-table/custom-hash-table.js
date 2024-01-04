@@ -21,6 +21,21 @@ class HashTable {
         return undefined;
     }
 
+    getValues() {
+        let values = [];
+        for (const bucket of this.storage) {
+            //console.log(bucket);
+            if (bucket !== undefined) {
+                //console.log(bucket);
+                for (let i = 0; i < bucket.length; i++) {
+                    //console.log(`This is the key value pair: ${bucket[i]}`);
+                    values.push(bucket[i][1]);
+                }
+            }
+        }
+        return values;
+    }
+
     has(key) {
         const index = this._hash(key, this.limit);
         let bucket = this.storage[index];

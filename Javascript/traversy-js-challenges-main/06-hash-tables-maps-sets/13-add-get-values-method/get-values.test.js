@@ -1,4 +1,4 @@
-const HashTable = require('./HashTable');
+const HashTable = require('../11-custom-hash-table/custom-hash-table');//require('./HashTable');
 
 describe('HashTable', () => {
   let hashTable;
