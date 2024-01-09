@@ -27,7 +27,37 @@ class DoublyLinkedList {
         return true;
     }
 
-    insert(index, data) {
+    contains(data) {
+        let currentNode = this.head;
+        if (currentNode) {
+            for(let i = 0; i < this.length; i++) {
+                if (currentNode.data === data){
+                    return true;
+                }
+                currentNode = currentNode.next;
+            }
+        }
+        return false;
+    }
+
+    get(index) {
+        if(index < 0 || index > this.length) {
+            return null;
+        }
+        if (index === 0) {
+            return this.head;
+        } else if (index === this.length - 1) {
+            return this.tail
+        } else {
+            let currentNode = this.head;
+            for(let i = 0; i < index; i++) {
+                currentNode = currentNode.next;
+            }
+            return currentNode;
+        }
+    }
+
+    insertAt(index, data) {
         if(index < 0 || index > this.length) {
             return false;
         }
