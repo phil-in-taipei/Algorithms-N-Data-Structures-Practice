@@ -6,6 +6,7 @@ from factorial.factorial import FactorialViaRecursion
 from calculate_number_to_power.calculate_number_to_power_of import PowerOfRecursive
 from calculate_sum_of_number_in_list.calculate_sum_of_numbers_in_list import CalculateSumOfListNumbersRecursively
 from generate_list_in_number_range.generate_list_in_number_range import GenerateListInNumberRangeRecursively
+from flatten_nested_list.flatten_nested_list import FlattenNestedList
 
 
 def print_intro(name_of_class):
@@ -87,4 +88,9 @@ if __name__ == '__main__':
     )
     print(f"The result is: {numbers_in_range.get_list_of_numbers()}")
     print_divider_line()
+    print_divider_line()
+    print_intro("FlattenNestedListRecursively")
+    list_to_flatten = FlattenNestedList()
+    flattened_list = list_to_flatten.get_flattened_list([1, [2, 3, 4], [5, 6], 7, [8, 9]])
+    print(flattened_list)
 
