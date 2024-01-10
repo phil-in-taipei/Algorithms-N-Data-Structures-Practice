@@ -7,6 +7,7 @@ from calculate_number_to_power.calculate_number_to_power_of import PowerOfRecurs
 from calculate_sum_of_number_in_list.calculate_sum_of_numbers_in_list import CalculateSumOfListNumbersRecursively
 from generate_list_in_number_range.generate_list_in_number_range import GenerateListInNumberRangeRecursively
 from flatten_nested_list.flatten_nested_list import FlattenNestedList
+from permutations.permutations import Permutations
 
 
 def print_intro(name_of_class):
@@ -93,4 +94,11 @@ if __name__ == '__main__':
     list_to_flatten = FlattenNestedList()
     flattened_list = list_to_flatten.get_flattened_list([1, [2, 3, 4], [5, 6], 7, [8, 9]])
     print(flattened_list)
+    print_divider_line()
+    print_intro("Permutations of a string -- abc")
+    print_divider_line()
+    permutations_generator = Permutations()
+    list_of_permutations = permutations_generator.get_list_of_permutations("abc")
+    print(str(list_of_permutations))
+    print_divider_line()
 
