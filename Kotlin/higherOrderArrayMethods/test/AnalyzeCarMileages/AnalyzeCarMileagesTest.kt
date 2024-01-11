@@ -7,7 +7,8 @@ import org.junit.jupiter.api.BeforeEach
 
 class AnalyzeCarMileagesTest {
 
-    lateinit var analysisObject1: AnalyzeCarMileages;
+    private lateinit var analysisObject1: AnalyzeCarMileages;
+    
     @BeforeEach
     fun setUp() {
         val carsData = ArrayList<CarData>()
@@ -21,11 +22,12 @@ class AnalyzeCarMileagesTest {
 
     @Test
     fun getCarAnalysisData() {
-        assertEquals(analysisObject1.getCarAnalysisData().lowestMileageCar.make, "Ford")
-        assertEquals(analysisObject1.getCarAnalysisData().lowestMileageCar.mileage, 15000)
-        assertEquals(analysisObject1.getCarAnalysisData().highestMileageCar.make, "Honda")
-        assertEquals(analysisObject1.getCarAnalysisData().highestMileageCar.mileage, 30000)
-        assertEquals(analysisObject1.getCarAnalysisData().averageMileage, 23333)
-        assertEquals(analysisObject1.getCarAnalysisData().totalMileage, 70000)
+        val analysisData1 = analysisObject1.getCarAnalysisData()
+        assertEquals(analysisData1.lowestMileageCar.make, "Ford")
+        assertEquals(analysisData1.lowestMileageCar.mileage, 15000)
+        assertEquals(analysisData1.highestMileageCar.make, "Honda")
+        assertEquals(analysisData1.highestMileageCar.mileage, 30000)
+        assertEquals(analysisData1.averageMileage, 23333)
+        assertEquals(analysisData1.totalMileage, 70000)
     }
 }
