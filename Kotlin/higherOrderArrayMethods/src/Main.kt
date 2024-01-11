@@ -1,3 +1,5 @@
+import AnalyzeCarMileages.AnalyzeCarMileages
+import AnalyzeCarMileages.CarData
 import arrayMethodsPractice.ArrayOfIntegers
 import utilities.Print
 import calculateSalesAmount.*
@@ -49,4 +51,16 @@ fun main() {
     println("The strings, 'app' and 'ppa' are anagrams: ${anagramValidation.validateByMeansOfStringComparison()}")
     print.printDividerLine()
     println("The strings 'app' and 'ppa' are anagrams: ${anagramValidation.validateByMeansOfMapComparison()}")
+    print.printDividerLine()
+    print.printDividerLine()
+    print.printInitializationAnnouncement("AnalyzeCarMileages")
+    val carsData = ArrayList<CarData>()
+    carsData.add(CarData(make="Toyota", model="Carola", mileage = 25000, year=2020))
+    carsData.add(CarData(make="Honda", model="Civic", mileage = 30000, year=2019))
+    carsData.add(CarData(make="Ford", model="Mustang", mileage = 15000, year=2021))
+    val analysisObject = AnalyzeCarMileages(carsData);
+    print.printDividerLine()
+    println("This is the result of the analysis: ${analysisObject.getCarAnalysisData().toString()}")
+    print.printDividerLine()
+
 }
