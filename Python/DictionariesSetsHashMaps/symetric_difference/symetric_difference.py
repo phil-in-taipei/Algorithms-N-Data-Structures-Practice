@@ -1,5 +1,4 @@
-class SymetricDifference:
-
+class SymetricDifferences:
     def __init__(self, list_1, list_2):
         self.list_1 = list_1
         self.list_2 = list_2
