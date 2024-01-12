@@ -9,6 +9,7 @@ import highestScoringWord.HighestScoringWord
 import anagrams.AnagramValidation
 import Validators.PasswordValidator
 import Validators.IPv4Validator
+import FindMissing.FindMissingConsecutiveLetter
 
 fun main() {
     val print = Print();
@@ -76,5 +77,9 @@ fun main() {
     val iPv4Validator = IPv4Validator("123.45.67.89")
     println("It is valid: ${iPv4Validator.isValidIPv4()}")
     print.printDividerLine()
+    print.printDividerLine()
+    print.printInitializationAnnouncement("FindMissingConsecutiveLetter")
+    val findMissingConsecutiveLetter = FindMissingConsecutiveLetter(listOf('a', 'b', 'd', 'e', 'f'))
+    println("In the sequence a, b, d, e, f, the missing letter is ${findMissingConsecutiveLetter.findMissingLetter()}")
     print.printDividerLine()
 }
