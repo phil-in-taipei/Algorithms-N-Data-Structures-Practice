@@ -8,6 +8,7 @@ import kotlin.collections.ArrayList
 import highestScoringWord.HighestScoringWord
 import anagrams.AnagramValidation
 import Validators.PasswordValidator
+import Validators.IPv4Validator
 
 fun main() {
     val print = Print();
@@ -70,5 +71,10 @@ fun main() {
     println("It is valid ${passwordValidator.stringIsAValidPassword()}")
     print.printDividerLine()
     print.printDividerLine()
-
+    print.printInitializationAnnouncement("IPv4Validator")
+    println("Now checking that '123.45.67.89' is a valid IPv4 address")
+    val iPv4Validator = IPv4Validator("123.45.67.89")
+    println("It is valid: ${iPv4Validator.isValidIPv4()}")
+    print.printDividerLine()
+    print.printDividerLine()
 }
