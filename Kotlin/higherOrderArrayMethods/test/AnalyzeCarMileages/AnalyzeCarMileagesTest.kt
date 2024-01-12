@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeEach
 class AnalyzeCarMileagesTest {
 
     private lateinit var analysisObject1: AnalyzeCarMileages;
-    
+
     @BeforeEach
     fun setUp() {
         val carsData = ArrayList<CarData>()

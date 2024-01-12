@@ -7,6 +7,7 @@ import java.math.BigDecimal
 import kotlin.collections.ArrayList
 import highestScoringWord.HighestScoringWord
 import anagrams.AnagramValidation
+import Validators.PasswordValidator
 
 fun main() {
     val print = Print();
@@ -61,6 +62,13 @@ fun main() {
     val analysisObject = AnalyzeCarMileages(carsData);
     print.printDividerLine()
     println("This is the result of the analysis: ${analysisObject.getCarAnalysisData().toString()}")
+    print.printDividerLine()
+    print.printDividerLine()
+    print.printInitializationAnnouncement("PasswordValidator")
+    println("Now checking that 'Abc12345' is a valid password")
+    val passwordValidator = PasswordValidator("Abc12345")
+    println("It is valid ${passwordValidator.stringIsAValidPassword()}")
+    print.printDividerLine()
     print.printDividerLine()
 
 }
