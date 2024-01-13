@@ -1,4 +1,5 @@
 from list_methods_practice.list_methods_practice import ListOfNumbers
+from validators.password_validator import PasswordValidator
 
 
 if __name__ == '__main__':
@@ -18,3 +19,10 @@ if __name__ == '__main__':
     greater_than_three = list_of_numbers.get_numbers_greater_than_three()
     print(f'This is only the even numbers in the list : {greater_than_three}')
     print("------------------------------------------------------------------------------------------------------------")
+    print("Initializing a new password validator with the string: Abc12345")
+    print(
+        "------------------------------------------------------------------------------------------------------------")
+    password_validator = PasswordValidator("Abc12345")
+    print(f'It is a valid password : {password_validator.string_is_a_valid_password()}')
+    print(
+        "------------------------------------------------------------------------------------------------------------")

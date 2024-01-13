@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8953f2b6-1ec7-4233-8a30-fd5360c03920" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AlgorithmPractice/validate_email/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AlgorithmPractice/validate_email/test_validate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AlgorithmPractice/validate_email/validate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ListMethodsPractice/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ListMethodsPractice/validators/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ListMethodsPractice/validators/password_validator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ListMethodsPractice/validators/test_password_validator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlgorithmPractice/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/AlgorithmPractice/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListMethodsPractice/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ListMethodsPractice/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,9 @@
     "Python tests.Python tests for dice_game.test_dice_game.TestDiceGame.executor": "Run",
     "Python tests.Python tests for test_find_missing_letter.TestFindMissingLetter.executor": "Run",
     "Python tests.Python tests for validate_email.test_validate.TestValidate.executor": "Run",
+    "Python tests.Python tests for validators.test_password_validator.TestPasswordValidator.executor": "Run",
     "Python tests.Python tests in test_find_missing_number.py.executor": "Run",
+    "Python.main (1).executor": "Run",
     "Python.main.executor": "Run",
     "Python.test_find_missing_number.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -48,7 +51,29 @@
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.Python tests for validate_email.test_validate.TestValidate">
+  <component name="RunManager" selected="Python tests.Python tests for validators.test_password_validator.TestPasswordValidator">
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ListMethodsPractice" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ListMethodsPractice/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="ENV_FILES" value="" />
@@ -109,21 +134,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_find_missing_letter.TestFindMissingLetter" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Python" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AlgorithmPractice/find_missing_letter" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_find_missing_letter.TestFindMissingLetter&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for validate_email.test_validate.TestValidate" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="ENV_FILES" value="" />
@@ -139,19 +149,35 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for validators.test_password_validator.TestPasswordValidator" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ListMethodsPractice" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;validators.test_password_validator.TestPasswordValidator&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for validators.test_password_validator.TestPasswordValidator" />
+        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python tests.Python tests for validate_email.test_validate.TestValidate" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python tests.Python tests for dice_game.test_dice_game.TestDiceGame" />
-        <item itemvalue="Python tests.Python tests for test_find_missing_letter.TestFindMissingLetter" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-7a29c1521ef0-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.11799.298" />
+        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
       </set>
     </attachedChunks>
   </component>
