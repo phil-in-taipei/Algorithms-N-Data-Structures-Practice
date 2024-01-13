@@ -1,5 +1,6 @@
 from list_methods_practice.list_methods_practice import ListOfNumbers
 from validators.password_validator import PasswordValidator
+from calculate_total_sales_with_tax.calculated_sales import CalculateSalesWithTax
 
 
 if __name__ == '__main__':
@@ -24,5 +25,11 @@ if __name__ == '__main__':
         "------------------------------------------------------------------------------------------------------------")
     password_validator = PasswordValidator("Abc12345")
     print(f'It is a valid password : {password_validator.string_is_a_valid_password()}')
-    print(
-        "------------------------------------------------------------------------------------------------------------")
+    print("-----------------------------------------------------------------------------------------------------------")
+    print("Initializing a new calculate sales with tax object:")
+    products = [{"name": "Apple", "price": 0.5, "quantity": 10}, {"name": "Banana", "price": 0.3, "quantity": 20},{"name": "Orange", "price": 0.6, "quantity": 15},]
+    calculate_total_obj = CalculateSalesWithTax(products, 8)
+    print("-----------------------------------------------------------------------------------------------------------")
+    print(F"This is the total with tax: {calculate_total_obj.get_total()}")
+    print("-----------------------------------------------------------------------------------------------------------")
+    
