@@ -1,7 +1,7 @@
 from list_methods_practice.list_methods_practice import ListOfNumbers
 from validators.password_validator import PasswordValidator
 from calculate_total_sales_with_tax.calculated_sales import CalculateSalesWithTax
-
+from valid_anagrams.valid_anagrams import ValidAnagrams
 
 if __name__ == '__main__':
     print("------------------------------------------------------------------------------------------------------------")
@@ -32,4 +32,8 @@ if __name__ == '__main__':
     print("-----------------------------------------------------------------------------------------------------------")
     print(F"This is the total with tax: {calculate_total_obj.get_total()}")
     print("-----------------------------------------------------------------------------------------------------------")
-    
+    print("Now initializing a valid anagrams object with the words 'silent' and 'listen'")
+    anagrams_obj = ValidAnagrams("listen", "silent")
+    print("-----------------------------------------------------------------------------------------------------------")
+    print(F"They are anagrams: {anagrams_obj.get_verdict()}")
+    print("-----------------------------------------------------------------------------------------------------------")    
