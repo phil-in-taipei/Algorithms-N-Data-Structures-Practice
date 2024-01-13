@@ -30,7 +30,7 @@ if __name__ == '__main__':
     products = [{"name": "Apple", "price": 0.5, "quantity": 10}, {"name": "Banana", "price": 0.3, "quantity": 20},{"name": "Orange", "price": 0.6, "quantity": 15},]
     calculate_total_obj = CalculateSalesWithTax(products, 8)
     print("-----------------------------------------------------------------------------------------------------------")
-    print(F"This is the total with tax: {calculate_total_obj.get_total()}")
+    print(F"This is the total with tax: {calculate_total_obj.get_total_with_tax()}")
     print("-----------------------------------------------------------------------------------------------------------")
     print("Now initializing a valid anagrams object with the words 'silent' and 'listen'")
     anagrams_obj = ValidAnagrams("listen", "silent")
