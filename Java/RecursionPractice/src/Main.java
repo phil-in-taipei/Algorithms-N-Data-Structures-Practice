@@ -1,7 +1,4 @@
-import calculations.CountDown;
-import calculations.GenerateListOfIntegersInRange;
-import calculations.NumberToPowerOf;
-import calculations.SumOfArrayOfIntegers;
+import calculations.*;
 
 import java.util.List;
 
@@ -29,6 +26,14 @@ public class Main {
         System.out.println("Implementing recursive generation of list of integers from 15 to 20");
         GenerateListOfIntegersInRange generateListOfIntegersInRange = new GenerateListOfIntegersInRange(15, 20);
         System.out.println("The result is: "+ generateListOfIntegersInRange.getListOfNumbers().toString());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Implementing recursive cumulative sum to to number 3");
+        CumulativeSumUpToNumber cumulativeSumUpToNumber = new CumulativeSumUpToNumber(3);
+        System.out.println("The result is: "+ cumulativeSumUpToNumber.getValue());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Implementing factorial of the number 5");
+        Factorial factorial = new Factorial(5);
+        System.out.println("The result is: "+ factorial.getValue());
         System.out.println("--------------------------------------------------------------------------------------------");
     }
 }
