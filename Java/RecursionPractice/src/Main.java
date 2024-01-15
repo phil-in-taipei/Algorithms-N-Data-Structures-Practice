@@ -1,4 +1,6 @@
 import calculations.*;
+import strings.PermutationsOfAString;
+import strings.ReverseString;
 
 import java.util.List;
 
@@ -39,5 +41,16 @@ public class Main {
         Fibonacci fibonacci = new Fibonacci(6);
         System.out.println("The result is: "+ fibonacci.getValue());
         System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Implementing reverse string of 'Hello World!'");
+        ReverseString reverseString = new ReverseString("Hello Word!");
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("The reversed string is: " + reverseString.getOutput());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Implementing permutations of the string: 'dog'");
+        PermutationsOfAString permutationsOfAString = new PermutationsOfAString("dog");
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("The possible permutations are: " + permutationsOfAString.getListOfPermutations().toString());
+        System.out.println("--------------------------------------------------------------------------------------------");
+
     }
 }
