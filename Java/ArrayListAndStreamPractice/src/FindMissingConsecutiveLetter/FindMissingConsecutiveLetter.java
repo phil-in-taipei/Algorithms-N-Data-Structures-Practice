@@ -8,9 +8,9 @@ public class FindMissingConsecutiveLetter {
         this.arrayOfChars = arrayOfChars;
     }
     public Character findMissingLetter() {
-        int[] previousCode = {arrayOfChars.get(0)};
+        int[] previousCode = {this.arrayOfChars.get(0)};
 
-        Integer missingCharCode = arrayOfChars.stream()
+        Integer missingCharCode = this.arrayOfChars.stream()
                 .skip(1)
                 .map(c -> (int) c)
                 .filter(current -> {
