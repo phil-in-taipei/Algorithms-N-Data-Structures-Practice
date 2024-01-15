@@ -35,5 +35,9 @@ public class Main {
         Factorial factorial = new Factorial(5);
         System.out.println("The result is: "+ factorial.getValue());
         System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Implementing fibonacci of number 6");
+        Fibonacci fibonacci = new Fibonacci(6);
+        System.out.println("The result is: "+ fibonacci.getValue());
+        System.out.println("--------------------------------------------------------------------------------------------");
     }
 }
