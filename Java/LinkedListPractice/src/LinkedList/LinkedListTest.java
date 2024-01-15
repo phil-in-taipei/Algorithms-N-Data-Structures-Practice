@@ -1,20 +1,32 @@
 package LinkedList;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.Optional;
 import java.util.function.BooleanSupplier;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class LinkedListTest {
+
+    private final PrintStream standardOut = System.out;
+    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
     LinkedList testLinkedList;
 
     @BeforeEach
     void setUp() {
+        System.setOut(new PrintStream(outputStreamCaptor));
         this.testLinkedList = new LinkedList(10);
         this.testLinkedList.add(100);
+    }
+
+    @AfterEach
+    public void tearDown() {
+        System.setOut(standardOut);
     }
 
     @Test
@@ -39,6 +51,15 @@ class LinkedListTest {
     void insertAt() {
         this.testLinkedList.insertAt(0, 50);
         assertEquals(50, this.testLinkedList.head.getData());
+    }
+
+    @Test
+    void printAll() {
+        this.testLinkedList.add(400);
+        this.testLinkedList.printAll();
+        String output = outputStreamCaptor.toString().trim();
+        assertTrue(output.contains("100"));
+        assertTrue(output.contains("400"));
     }
 
     @Test
