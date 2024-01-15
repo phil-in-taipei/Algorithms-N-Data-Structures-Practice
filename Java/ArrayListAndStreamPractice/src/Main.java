@@ -2,11 +2,13 @@ import Anagrams.AnagramValidation;
 import ArrayListPractice.ArrayListOfIntegers;
 import CalculateSales.CalculateSales;
 import CalculateSales.SalesTransaction;
+import FindMissingConsecutiveLetter.FindMissingConsecutiveLetter;
 import WordCount.HighestScoringWord;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -51,6 +53,35 @@ public class Main {
         HighestScoringWord highestScoringWord = new HighestScoringWord("Hello my name is xavier");
         System.out.println("The highest scoring word in the string, 'Hello my name is xavier' is: " +
                     highestScoringWord.getHighestScoringWord());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Initializing a find the missing consecutive letter class with sequence 'a', b', 'd', 'e'");
+        System.out.println("--------------------------------------------------------------------------------------------");
+        FindMissingConsecutiveLetter findMissingConsecutiveLetter = new FindMissingConsecutiveLetter(List.of('a', 'b', 'd', 'e'));
+
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("The missing Char is: " + findMissingConsecutiveLetter.findMissingLetter());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Initializing a find the missing consecutive letter class with sequence 'a', 'b', 'c', 'e'");
+        System.out.println("--------------------------------------------------------------------------------------------");
+        FindMissingConsecutiveLetter findMissingConsecutiveLetter2 = new FindMissingConsecutiveLetter(List.of('a', 'b', 'c', 'e'));
+
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("The missing Char is: " + findMissingConsecutiveLetter2.findMissingLetter());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Initializing a find the missing consecutive letter class with sequence 'q', 'r', 's', 't', 'v'");
+        System.out.println("--------------------------------------------------------------------------------------------");
+        FindMissingConsecutiveLetter findMissingConsecutiveLetter3 = new FindMissingConsecutiveLetter(List.of('q', 'r', 's', 't', 'v'));
+
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("The missing Char is: " + findMissingConsecutiveLetter3.findMissingLetter());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("Initializing a find the missing consecutive letter class with sequence 'l', 'm', 'n', 'o'");
+        System.out.println("--------------------------------------------------------------------------------------------");
+        FindMissingConsecutiveLetter findMissingConsecutiveLetter4 = new FindMissingConsecutiveLetter(List.of('l', 'm', 'n', 'o'));
+
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("The missing Char is: " + findMissingConsecutiveLetter4.findMissingLetter());
         System.out.println("--------------------------------------------------------------------------------------------");
     }
 }
