@@ -17,7 +17,7 @@ class DoublyLinkedList:
         self.max_size = max_size
 
     def append(self, data):
-        if self.get_remaining_space() > 0:
+        if self._get_remaining_space() > 0:
             new_node = DoublyLinkedNode(data)
             if self.length == 0:
                 self.head = new_node
@@ -38,26 +38,26 @@ class DoublyLinkedList:
         return self.max_size
 
     def get_data_at_index_or_null(self, index):
-        if self.index_is_in_range_of_current_list(index) and self.head is not None:
-            if self.index_is_in_first_half(index):
-                node = self.iterate_forward_to_get_node(index)
+        if self._index_is_in_range_of_current_list(index) and self.head is not None:
+            if self._index_is_in_first_half(index):
+                node = self._iterate_forward_to_get_node(index)
                 return node.data
             else:
-                node = self.iterate_backwards_to_get_node(index)
+                node = self._iterate_backwards_to_get_node(index)
                 return node.data
         else:
             return None
 
-    def get_remaining_space(self):
+    def _get_remaining_space(self):
         return self.max_size - self.length
 
-    def index_is_in_first_half(self, index):
+    def _index_is_in_first_half(self, index):
         return index < self.length / 2
 
-    def index_is_in_range_of_current_list(self, index):
+    def _index_is_in_range_of_current_list(self, index):
         return 0 <= index < self.length
 
-    def iterate_backwards_to_get_node(self, index):
+    def _iterate_backwards_to_get_node(self, index):
         current_node = self.tail
         current_index = self.length - 1
         while current_index > index and current_node is not None:
@@ -65,7 +65,7 @@ class DoublyLinkedList:
             current_index -= 1
         return current_node
 
-    def iterate_forward_to_get_node(self, index):
+    def _iterate_forward_to_get_node(self, index):
         current_node = self.head
         current_index = 0
         while current_index < index and current_node is not None:
@@ -74,17 +74,18 @@ class DoublyLinkedList:
         return current_node
 
     def insert_at(self, index, data):
-        if (self.index_is_in_range_of_current_list(index) or index == self.length) and self.get_remaining_space() > 0:
+        if ((self._index_is_in_range_of_current_list(index) or index == self.length)
+                and self._get_remaining_space() > 0):
             if index == 0:
                 self.prepend(data)
             elif index == self.length:
                 self.append(data)
             else:
                 new_node = DoublyLinkedNode(data)
-                if self.index_is_in_first_half(index):
-                    current_node = self.iterate_forward_to_get_node(index -1)
+                if self._index_is_in_first_half(index):
+                    current_node = self._iterate_forward_to_get_node(index -1)
                 else:
-                    current_node = self.iterate_backwards_to_get_node(index - 1)
+                    current_node = self._iterate_backwards_to_get_node(index - 1)
                 new_node.next = current_node.next
                 new_node.previous = current_node
                 current_node.next.previous = new_node
@@ -95,7 +96,7 @@ class DoublyLinkedList:
             return False
 
     def prepend(self, data):
-        if self.get_remaining_space() > 0:
+        if self._get_remaining_space() > 0:
             new_node = DoublyLinkedNode(data)
             if self.length == 0:
                 self.head = new_node
@@ -122,7 +123,7 @@ class DoublyLinkedList:
             current_node = current_node.previous
 
     def remove(self, index):
-        if self.index_is_in_range_of_current_list(index):
+        if self._index_is_in_range_of_current_list(index):
             if index == 0:
                 self.head = self.head.next
                 if self.head is not None:
@@ -136,10 +137,10 @@ class DoublyLinkedList:
                 else:
                     self.head = None
             else:
-                if self.index_is_in_first_half(index):
-                    current_node = self.iterate_forward_to_get_node(index)
+                if self._index_is_in_first_half(index):
+                    current_node = self._iterate_forward_to_get_node(index)
                 else:
-                    current_node = self.iterate_backwards_to_get_node(index)
+                    current_node = self._iterate_backwards_to_get_node(index)
                 current_node.previous.next = current_node.next
                 current_node.next.previous = current_node.previous
             self.length -= 1
