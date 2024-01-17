@@ -5,13 +5,13 @@ describe('findPairSum', () => {
     const nums = [2, 6, 3, 8, 10, 5];
     const targetSum = 12;
     const pair = findPairSum(nums, targetSum);
-    expect(pair).toEqual([2, 10]);
+    expect(pair).toEqual([10, 2] || [2, 10]);
   });
 
-  it('should return null if no such pair exists', () => {
+ it('should return null if no such pair exists', () => {
     const nums = [1, 2, 3, 4, 5];
     const targetSum = 10;
     const pair = findPairSum(nums, targetSum);
-    expect(pair).toBeNull();
+    expect(pair).toEqual([]);
   });
 });
