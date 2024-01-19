@@ -42,6 +42,7 @@ class BinarySearchTree {
            }
         }
     }
+        /*
     
     lookup(value) {
         let currentNode = this.root;
@@ -65,9 +66,9 @@ class BinarySearchTree {
         return null;
     }
 
-    /*
+*/
     lookup(data) {
-      console.log(`Beginning lookup with this root: ${this.root.data}`)
+      //console.log(`Beginning lookup with this root: ${this.root}`)
         if(!this.root) {
             return null;
         } else {
@@ -75,21 +76,23 @@ class BinarySearchTree {
             console.log(`This is the current node starting the search: ${currentNode.data}`)
             while(currentNode !==null) {
                 console.log('next iteration....')
-                if (data < currentNode.data && currentNode.left !== null) {
+                if (data < currentNode.data) { // && currentNode.left !== null
                     currentNode = currentNode.left;
                     console.log(`Now moving to the left`)
-                    console.log(currentNode.data);
-                } else if (data > currentNode.data && currentNode.right !==null){
-                    currentNode = currentNode.right;
+                    //console.log(currentNode.data);
+                } else if (data > currentNode.data){ // && currentNode.right !==null
+                  console.log(`Now moving to the right`)
+                  currentNode = currentNode.right;
                 } else if (data === currentNode.data) {
                     console.log(`found the node with value: ${data}`)
                     return currentNode;
                 }
+                //return null;
             }
             
             return null;
         }
-    } */
+    } 
 
 
     printTree() {
@@ -104,6 +107,7 @@ class BinarySearchTree {
         printNode(this.root);
     }
     
+
     remove(value) {
       console.log(`Beginning method to remove node with value: ${value} and root value: ${this.root.data}`)
       const removeNode = (node, value) => {
@@ -142,10 +146,59 @@ class BinarySearchTree {
           return node;
         }
       }
+      if (this.root!==null) {
+        if (value === this.root.data && this.root.left === null && this.root.right === null) {
+          const returnValue = this.root;
+          this.root = null;
+          return returnValue;
+        }
+      }
       console.log(`calling recursive function for first time`)
       removeNode(this.root, value);
     }
+  /*
+    remove(value) {
+      const removeNode = (node, value) => {
+        if (node === null) {
+          return null;
+        }
     
+        if (value < node.value) {
+          node.left = removeNode(node.left, value);
+          return node;
+        }
+        else if (value > node.value) {
+          node.right = removeNode(node.right, value);
+          return node;
+        }
+        else {
+          // Case 1: Node with no child or only one child
+          if (node.left === null) {
+            return node.right;
+          } else if (node.right === null) {
+            return node.left;
+          }
+    
+          // Case 2: Node with two children
+          // Find the smallest value in the right subtree (successor)
+          let tempNode = node.right;
+          while (tempNode.left !== null) {
+            tempNode = tempNode.left;
+          }
+    
+          // Case 3: Node is the root node
+          // Replace the node's value with the successor's value
+          node.value = tempNode.value;
+    
+          node.right = removeNode(node.right, tempNode.value);
+          return node;
+        }
+      };
+    
+      // Start at the root
+      this.root = removeNode(this.root, value);
+    }
+      */
 }
 
 module.exports = { Node, BinarySearchTree };

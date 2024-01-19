@@ -18,14 +18,36 @@ console.log('-------------------------------------------------------------------
 
 binarySearchTree.printTree();
 console.log('-------------------------------------------------------------------------------')
-const value = binarySearchTree.lookup(100);
-console.log(`The is the node with value 100: ${value}`);
+const value = binarySearchTree.lookup(5);
+console.log(`The is the node with value 5: ${value.data}`);
 console.log('-------------------------------------------------------------------------------')
-//console.log(`Removing node with value 5`);
-//binarySearchTree.remove(5)
-//console.log('-------------------------------------------------------------------------------')
+console.log(`Removing node with value 10`);
+binarySearchTree.remove(10)
+console.log('-------------------------------------------------------------------------------')
 
-//binarySearchTree.printTree();
-//console.log(`This is the root value: ${binarySearchTree.root.data}`);
-//console.log('-------------------------------------------------------------------------------')
+binarySearchTree.printTree();
+console.log(`This is the root value: ${binarySearchTree.root.data}`);
+console.log('-------------------------------------------------------------------------------')
+console.log(`Removing node with value 2`);
+binarySearchTree.remove(2)
+console.log('-------------------------------------------------------------------------------')
+
+binarySearchTree.printTree();
+console.log(`This is the root value: ${binarySearchTree.root.data}`);
+console.log('-------------------------------------------------------------------------------')
+console.log(`Removing node with value 5`);
+binarySearchTree.remove(5)
+console.log('-------------------------------------------------------------------------------')
+
+binarySearchTree.printTree();
+console.log(`This is the root value: ${binarySearchTree.root.data}`);
+console.log('-------------------------------------------------------------------------------')
+
+console.log(`Removing node with value 15`);
+binarySearchTree.remove(15)
+console.log('-------------------------------------------------------------------------------')
+
+binarySearchTree.printTree();
+console.log(`This is the root value: ${binarySearchTree.root}`);
+console.log('-------------------------------------------------------------------------------')
 

@@ -18,7 +18,7 @@ describe('BinarySearchTree', () => {
     expect(bst.root.right.data).toBe(15);
     expect(bst.root.left.left.data).toBe(2);
   });
-  /*
+  
   test('should find existing nodes using lookup', () => {
     bst.insert(10);
     bst.insert(5);
@@ -28,7 +28,7 @@ describe('BinarySearchTree', () => {
     expect(bst.lookup(5).data).toBe(5);
     expect(bst.lookup(15).data).toBe(15);
   });
-
+  
   test('should return null for non-existing nodes using lookup', () => {
     bst.insert(10);
     bst.insert(5);
@@ -38,7 +38,7 @@ describe('BinarySearchTree', () => {
     expect(bst.lookup(8)).toBeNull();
     expect(bst.lookup(20)).toBeNull();
   });
-
+ 
 
 
   test('should remove nodes correctly', () => {
@@ -57,11 +57,14 @@ describe('BinarySearchTree', () => {
     bst.remove(15);
     expect(bst.lookup(15)).toBeNull();
 
-    bst.remove(10);
-    expect(bst.lookup(10)).toBeNull();
-
     bst.remove(7);
     expect(bst.lookup(7)).toBeNull();
+
+    // 10 is the root -- seems to have issue removing last item
+    expect(bst.root.data).toEqual(10);
+
+    bst.remove(10); // has issue with removing 10
+    expect(bst.lookup(10)).toBeNull();
   });
 
   test('should handle removing root node correctly', () => {
@@ -72,7 +75,7 @@ describe('BinarySearchTree', () => {
     bst.remove(10);
     expect(bst.root.data).toBe(15);
   });
-    */
+  
   
   test('should print tree in-order', () => {
     const consoleSpy = jest.spyOn(console, 'log').mockImplementation(() => {}); // Spy on console.log and mock the implementation
