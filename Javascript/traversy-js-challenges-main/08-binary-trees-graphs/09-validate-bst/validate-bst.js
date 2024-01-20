@@ -29,8 +29,18 @@ function isValidBST(root) {
       console.log(`Second condition (value greater than or equal to max): ${max !== null && node.value >= max}`)
       return false;
     }
-
+    console.log('//////////////////////////////////////////////////////////////////////')
     console.log(`Valid: calling again with left and right nodes`)
+    if (node.left) {
+      console.log(`Node left: ${node.left.value}`);
+    } else {
+      console.log("Node left: null");
+    }
+    if (node.right) {
+      console.log(`Node right: ${node.right.value}`);
+    } else {
+      console.log("Node right: null");
+    }
     console.log("###################################################################")
     return (
       isValidSubtree(node.left, min, node.value) &&
