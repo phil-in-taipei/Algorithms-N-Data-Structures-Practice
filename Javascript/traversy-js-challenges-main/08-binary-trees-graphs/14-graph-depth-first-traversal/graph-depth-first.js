@@ -41,15 +41,14 @@ function depthFirstTraversal(graph, startingVertex) {
 
     stack.push(startingVertex);
 
-
     while (!stack.isEmpty()) {
         const currentVertex = stack.pop();
-        if (!alreadyVistedVertices.has(currentVertex)) {
-            alreadyVistedVertices.set(currentVertex, true);
-        }
-        graph.adjacencyList[currentVertex].forEach((neighbor) => {
-            if (!alreadyVistedVertices.has(neighbor)) {
-                stack.push(neighbor);
+        alreadyVistedVertices.set(currentVertex, true);
+
+        graph.adjacencyList[currentVertex].forEach((neighboringVertex) => {
+            if (!alreadyVistedVertices.get(neighboringVertex)) { // could also use 'has'
+                //get returns undefined if key is not in the map
+                stack.push(neighboringVertex);
             }
         });
     }
