@@ -25,10 +25,16 @@ if __name__ == '__main__':
     print(a.left.data)
     print('---------------------------------------------------------------------------')
     print('Initializing Traversal object with a node as the root')
-    traversal_obj = Traversal()
-    results = traversal_obj.get_depth_first(a)
-    results_data = [result.data for result in results]
+    traversal_obj = Traversal(a)
+    results1 = traversal_obj.get_depth_first()
+    results_data1 = [result.data for result in results1]
     print('---------------------------------------------------------------------------')
-    print(F"This is the output of a depth-first traversal: {results_data}")
+    print(F"This is the output of a depth-first traversal: {results_data1}")
+    print('---------------------------------------------------------------------------')
+    results2 = traversal_obj.get_breadth_first()
+    print(len(results2))
+    results_data2 = [result.data for result in results2]
+    print('---------------------------------------------------------------------------')
+    print(F"This is the output of a breadth-first traversal: {results_data2}")
     print('---------------------------------------------------------------------------')
 

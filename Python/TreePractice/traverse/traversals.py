@@ -1,27 +1,38 @@
-from queue import LifoQueue
+from queue import LifoQueue, Queue
 
 
 class Traversal:
-    def __init__(self):
+    def __init__(self, root_node):
+        self.root_node = root_node
         self.nodes_in_tree = []
 
-    def get_depth_first(self, root_node):
-        if root_node is None:
+    def _reset_nodes_in_tree(self):
+        self.nodes_in_tree = []
+
+    def get_breadth_first(self):
+        self._reset_nodes_in_tree()
+        if self.root_node is None:
+            return self.nodes_in_tree
+        queue = Queue(100)
+        queue.put(self.root_node)
+        while not queue.empty():
+            current_node = queue.get()
+            self.nodes_in_tree.append(current_node)
+            if current_node.left is not None:
+                queue.put(current_node.left)
+            if current_node.right is not None:
+                queue.put(current_node.right)
+        return self.nodes_in_tree
+
+    def get_depth_first(self):
+        self._reset_nodes_in_tree()
+        if self.root_node is None:
             return self.nodes_in_tree
         stack = LifoQueue(maxsize=100)
-        stack.put(root_node)
-        print(stack.qsize())
+        stack.put(self.root_node)
         while not stack.empty():
-        #for i in range(10):
-            print(stack.qsize())
             current_node = stack.get()
-            print("This is the current node: " + str(current_node.data))
-            print("This is the current stack size: " + str(stack.qsize()))
             self.nodes_in_tree.append(current_node)
-            print("This is the current node -- right: ")
-            print(current_node.right)
-            print("This is the current node -- left: ")
-            print(current_node.left)
             if current_node.right is not None:
                 stack.put(current_node.right)
             if current_node.left is not None:
