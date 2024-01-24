@@ -38,3 +38,14 @@ class Traversal:
             if current_node.left is not None:
                 stack.put(current_node.left)
         return self.nodes_in_tree
+
+    # Recursive method to determine maximum depth in the tree
+    def _calculate_max_depth(self, node):
+        if node is None:
+            return 0
+        max_depth_left = self._calculate_max_depth(node.left)
+        max_depth_right = self._calculate_max_depth(node.right)
+        return max(max_depth_left, max_depth_right) + 1
+
+    def get_max_depth(self):
+        return self._calculate_max_depth(node=self.root_node)

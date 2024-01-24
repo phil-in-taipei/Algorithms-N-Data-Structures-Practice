@@ -37,4 +37,6 @@ if __name__ == '__main__':
     print('---------------------------------------------------------------------------')
     print(F"This is the output of a breadth-first traversal: {results_data2}")
     print('---------------------------------------------------------------------------')
-
+    max_depth = traversal_obj.get_max_depth()
+    print(F"The maximum depth is: {max_depth}")
+    print('---------------------------------------------------------------------------')

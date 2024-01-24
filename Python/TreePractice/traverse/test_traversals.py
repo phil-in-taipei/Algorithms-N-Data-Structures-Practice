@@ -38,3 +38,7 @@ class TestTraversal(TestCase):
             str(results_data),
             "['a', 'b', 'd', 'e', 'c', 'f', 'g']"
         )
+
+    def test_get_max_depth(self):
+        result = self.test_traversal_obj.get_max_depth()
+        self.assertEqual(result, 3)
