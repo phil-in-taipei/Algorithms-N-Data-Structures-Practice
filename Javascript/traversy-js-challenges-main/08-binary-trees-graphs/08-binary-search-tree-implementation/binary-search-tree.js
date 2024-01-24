@@ -122,7 +122,8 @@ class BinarySearchTree {
           return node;
         } else if (value > node.data) {
           console.log(`The value (${value}) is greater than the node value (${node.data}), so now calling function with right node`);
-          node.right = removeNode(node.right, value)
+          node.right = removeNode(node.right, value);
+          return node;
         } else {
           console.log(`The node has no child or only one child`);
           if (node.left === null) {

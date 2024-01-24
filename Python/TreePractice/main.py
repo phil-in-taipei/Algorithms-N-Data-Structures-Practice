@@ -1,8 +1,10 @@
 from node.tree_node import TreeNode
 from traverse.traversals import Traversal
+from binary_search_tree.binary_search_tree import BinarySearchTree
 
 
 if __name__ == '__main__':
+    '''
     print('----------------------------------------------------------------------')
     print('Implementing tree nodes:')
     a = TreeNode("a")
@@ -40,3 +42,33 @@ if __name__ == '__main__':
     max_depth = traversal_obj.get_max_depth()
     print(F"The maximum depth is: {max_depth}")
     print('---------------------------------------------------------------------------')
+    '''
+    print('---------------------------------------------------------------------------')
+    print('Initializing binary search tree, and adding a as first value')
+    bst = BinarySearchTree()
+    bst.insert('a')
+    print('---------------------------------------------------------------------------')
+    print("Test printing tree with one node:")
+    bst.print_tree()
+    print('---------------------------------------------------------------------------')
+    print("Now adding more nodes:")
+    bst.insert('f')
+    bst.insert('y')
+    bst.insert('c')
+    bst.insert('m')
+    bst.insert('o')
+    bst.insert('s')
+    print('---------------------------------------------------------------------------')
+    bst.print_tree()
+    print('---------------------------------------------------------------------------')
+    print("Attempting to look up node for letter o")
+    print('---------------------------------------------------------------------------')
+    lookup1 = bst.lookup('o')
+    print(lookup1.data)
+    print('---------------------------------------------------------------------------')
+    lookup2 = bst.lookup('x')
+    print(lookup2)
+    print('---------------------------------------------------------------------------')
+    result = bst.remove('m')
+    print(result)
+    bst.print_tree()
