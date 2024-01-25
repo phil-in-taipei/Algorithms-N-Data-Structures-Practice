@@ -1,9 +1,26 @@
 from node.tree_node import TreeNode
+from queue import Queue
 
 
 class BinarySearchTree:
     def __init__(self):
         self.root = None
+
+    # uses breadth first traversal to count the number of nodes
+    def get_count(self):
+        number_of_nodes = 0
+        if self.root is None:
+            return number_of_nodes
+        queue = Queue(100)
+        queue.put(self.root)
+        while not queue.empty():
+            current_node = queue.get()
+            number_of_nodes += 1
+            if current_node.left is not None:
+                queue.put(current_node.left)
+            if current_node.right is not None:
+                queue.put(current_node.right)
+        return number_of_nodes
 
     def insert(self, data):
         new_node = TreeNode(data)
@@ -38,15 +55,17 @@ class BinarySearchTree:
             return None
 
     def print_tree(self):
-        self.recursively_print_tree_nodes(self.root)
+        self._recursively_print_tree_nodes(self.root)
 
-    def recursively_print_tree_nodes(self, node):
+    def _recursively_print_tree_nodes(self, node):
         if node is None:
             return
-        self.recursively_print_tree_nodes(node.left)
+        self._recursively_print_tree_nodes(node.left)
         print(node.data)
-        self.recursively_print_tree_nodes(node.right)
+        self._recursively_print_tree_nodes(node.right)
 
+    # uses a function wrapped inside the method, which is called recursively
+    # doesn't return output to the user
     def remove(self, data):
         def recursively_remove_node(node, removal_data):
             if node is None:
@@ -70,7 +89,32 @@ class BinarySearchTree:
                 return node
         self.root = recursively_remove_node(self.root, removal_data=data)
 
-
-
-
-
+    # overloaded and is called recursively -- the node keyword argument is optional
+    # so it will initially be called only with the removal data and not with a node
+    # once inside the method, if the node argument is missing, then the recursive
+    # process will be called for the first time -- doesn't return output to the user
+    def remove_overloaded(self, **kwargs):
+        removal_data = kwargs['removal_data']
+        if 'node' in kwargs:
+            node = kwargs['node']
+            if node is None:
+                return None
+            if removal_data < node.data:
+                node.left = self.remove_overloaded(node=node.left, removal_data=removal_data)
+                return node
+            elif removal_data > node.data:
+                node.right = self.remove_overloaded(node=node.right, removal_data=removal_data)
+                return node
+            else:
+                if node.left is None:
+                    return node.right
+                elif node.right is None:
+                    return node.left
+                temporary_node = node.right
+                while temporary_node.left is not None:
+                    temporary_node = temporary_node.left
+                node.data = temporary_node.data
+                node.right = self.remove_overloaded(node=node.right, removal_data=temporary_node.data)
+                return node
+        else:
+            self.remove_overloaded(node=self.root, removal_data=removal_data)

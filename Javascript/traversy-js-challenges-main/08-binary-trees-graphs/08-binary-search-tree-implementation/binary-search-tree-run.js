@@ -44,7 +44,7 @@ console.log(`This is the root value: ${binarySearchTree.root.data}`);
 console.log('-------------------------------------------------------------------------------')
 
 console.log(`Removing node with value 15`);
-binarySearchTree.remove(15)
+console.log(binarySearchTree.remove(15));
 console.log('-------------------------------------------------------------------------------')
 
 binarySearchTree.printTree();
