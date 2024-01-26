@@ -1,4 +1,5 @@
 import calculations.Countdown
+import calculations.GenerateIntegersInRange
 import calculations.SumOfArrayOfIntegers
 import strings.ReverseString
 
@@ -20,6 +21,13 @@ fun main() {
     val reverseString = ReverseString("mellow")
     println("-----------------------------------------------------------------------------------------------------------")
     println("The reverse of 'mellow' is '${reverseString.getResult()}'")
+    println("-----------------------------------------------------------------------------------------------------------")
+    println("-----------------------------------------------------------------------------------------------------------")
+    println("Implementing recursion to get a list of integers in a range (1-5")
+    val generateIntegersInRange = GenerateIntegersInRange(1, 5)
+    println("-----------------------------------------------------------------------------------------------------------")
+    val output = generateIntegersInRange.getOutput()
+    println("This is the output: ${output.contentToString()}")
     println("-----------------------------------------------------------------------------------------------------------")
 
 }
