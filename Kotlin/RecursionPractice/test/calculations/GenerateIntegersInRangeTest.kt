@@ -6,12 +6,12 @@ import org.junit.jupiter.api.Assertions.*
 
 class GenerateIntegersInRangeTest {
 
-    val test1 = GenerateIntegersInRange(1, 5)
+    private val test1 = GenerateIntegersInRange(1, 5)
 
-    val test2 = GenerateIntegersInRange(30, 35)
+    private val test2 = GenerateIntegersInRange(30, 35)
 
 
-    val test3 = GenerateIntegersInRange(-20, -10)
+    private val test3 = GenerateIntegersInRange(-20, -10)
 
 
     @Test

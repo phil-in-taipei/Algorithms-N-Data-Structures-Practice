@@ -1,6 +1,4 @@
-import calculations.Countdown
-import calculations.GenerateIntegersInRange
-import calculations.SumOfArrayOfIntegers
+import calculations.*
 import strings.ReverseString
 
 
@@ -23,11 +21,22 @@ fun main() {
     println("The reverse of 'mellow' is '${reverseString.getResult()}'")
     println("-----------------------------------------------------------------------------------------------------------")
     println("-----------------------------------------------------------------------------------------------------------")
-    println("Implementing recursion to get a list of integers in a range (1-5")
+    println("Implementing recursion to get a list of integers in a range (1-5)")
     val generateIntegersInRange = GenerateIntegersInRange(1, 5)
     println("-----------------------------------------------------------------------------------------------------------")
-    val output = generateIntegersInRange.getOutput()
-    println("This is the output: ${output.contentToString()}")
+    val integersInRangeOutput = generateIntegersInRange.getOutput()
+    println("This is the output: ${integersInRangeOutput.contentToString()}")
     println("-----------------------------------------------------------------------------------------------------------")
-
+    println("-----------------------------------------------------------------------------------------------------------")
+    println("Implementing recursion to generate Fibonacci value at index 6")
+    val fibonacci = Fibonacci(6)
+    println("-----------------------------------------------------------------------------------------------------------")
+    println("This is the output: ${fibonacci.getValue()}")
+    println("-----------------------------------------------------------------------------------------------------------")
+    println("-----------------------------------------------------------------------------------------------------------")
+    println("Implementing recursion to generate Factorial of 5")
+    val factorial = Factorial(5)
+    println("-----------------------------------------------------------------------------------------------------------")
+    println("This is the output: ${factorial.getValue()}")
+    println("-----------------------------------------------------------------------------------------------------------")
 }
