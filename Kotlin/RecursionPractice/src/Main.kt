@@ -1,4 +1,5 @@
 import calculations.*
+import strings.Permutations
 import strings.ReverseString
 
 
@@ -38,5 +39,11 @@ fun main() {
     val factorial = Factorial(5)
     println("-----------------------------------------------------------------------------------------------------------")
     println("This is the output: ${factorial.getValue()}")
+    println("-----------------------------------------------------------------------------------------------------------")
+    println("Implementing recursion to generate all permutations of the string knocker'")
+    val permutations = Permutations("add")
+    println("-----------------------------------------------------------------------------------------------------------")
+    val permutationsOutput = permutations.getArray()
+    println("This is the output: $permutationsOutput")
     println("-----------------------------------------------------------------------------------------------------------")
 }
