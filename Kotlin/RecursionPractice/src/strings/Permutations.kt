@@ -3,6 +3,7 @@ package strings
 class Permutations(private val string: String) {
 
     private fun recursivelyGenerate(diminishingString : String): ArrayList<String> {
+        println("This is the string: $diminishingString")
         val permutations = ArrayList<String>();
         if (diminishingString.length == 1) {
             permutations.add(diminishingString)
