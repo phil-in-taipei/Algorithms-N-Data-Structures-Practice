@@ -39,7 +39,7 @@ class LinkedList(
     }
 
     fun insertAt(index : Int, data : Int) {
-        println("Insert at method called with index ($index) and data ($data)")
+        //println("Insert at method called with index ($index) and data ($data)")
         val newNode = Node(data=data, next=null)
         if (index == 0) {
             newNode.next = head
@@ -56,6 +56,11 @@ class LinkedList(
             if (currentIndex == index) {
                 newNode.next = currentNode
                 previousNode!!.next = newNode
+                // check to make sure it isn't at the end
+                if (newNode.next == null) {
+                    // if it is at the end, reset tail
+                    tail = newNode
+                }
             }
         }
     }
@@ -79,7 +84,7 @@ class LinkedList(
     }
 
     fun remove(index : Int) {
-        println("Remove method called with index ($index)")
+       // println("Remove method called with index ($index)")
         if (index == 0) {
             head = if (head?.next != null) {
                 head!!.next
@@ -97,6 +102,11 @@ class LinkedList(
             }
             if (currentIndex == index && currentNode != null) {
                 previousNode!!.next = currentNode.next
+                // check to make sure it isn't at the end
+                if (previousNode.next == null) {
+                    // if it is at the end, then reset the tail
+                    tail = previousNode
+                }
             }
         }
     }

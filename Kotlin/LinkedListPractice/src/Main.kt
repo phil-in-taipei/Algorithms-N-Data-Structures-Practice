@@ -31,7 +31,7 @@ fun main() {
     println("This is the node with data of 0: ${linkedList.get(0).toString()}")
     println("-----------------------------------------------------------------------------------------------------------")
     println("Attempting to insert data")
-    linkedList.insertAt(0, 4)
+    linkedList.insertAt(3, 4)
     println("-----------------------------------------------------------------------------------------------------------")
     println("These are the items in the linked list")
     linkedList.printAll()
