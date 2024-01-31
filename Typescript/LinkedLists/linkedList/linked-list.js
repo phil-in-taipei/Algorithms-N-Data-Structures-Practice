@@ -1,9 +1,14 @@
 "use strict";
-//const { ListNodeImplementation } = require('./node');
 class ListNode {
     constructor(data) {
         this.data = data;
         this.next = null;
+    }
+    getData() {
+        return this.data;
+    }
+    getNext() {
+        return this.next;
     }
 }
 class LinkedList {
@@ -21,8 +26,13 @@ class LinkedList {
         }
         this.tail = newNode;
     }
-    insert(index, data) {
+    insertAt(index, data) {
         console.log(`Calling insert with index ${index} and data ${data}`);
+        if (index == 0) {
+            const newNode = new ListNode(data);
+            newNode.next = this.head;
+            this.head = newNode;
+        }
         let currentNode = this.head;
         let previousNode = null;
         let currentIndex = 0;

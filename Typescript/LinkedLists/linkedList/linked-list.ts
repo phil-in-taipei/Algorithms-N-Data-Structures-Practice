@@ -1,4 +1,4 @@
-//const { ListNodeImplementation } = require('./node');
+
 class ListNode {
     data: number;
     next: ListNode | null;
@@ -6,6 +6,14 @@ class ListNode {
     constructor(data: number) {
         this.data = data;
         this.next = null;
+    }
+
+    getData(): number | null {
+        return this.data;
+    }
+
+    getNext(): ListNode | null {
+        return this.next;
     }
 }
 
@@ -28,8 +36,13 @@ class LinkedList {
         this.tail = newNode;
     }
 
-    insert(index: number, data: number) {
+    insertAt(index: number, data: number) {
         console.log(`Calling insert with index ${index} and data ${data}`)
+        if (index == 0) {
+            const newNode = new ListNode(data);
+            newNode.next = this.head
+            this.head = newNode
+        }
         let currentNode: ListNode | null = this.head;
         let previousNode: ListNode | null = null;
         let currentIndex: number = 0;

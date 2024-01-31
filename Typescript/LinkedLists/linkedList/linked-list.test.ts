@@ -14,6 +14,9 @@ describe('LinkedList', () => {
       linkedList.add(3);
 
       expect(linkedList.head).toBeTruthy();
+      expect(linkedList.head?.getData()).toEqual(1);
+      expect(linkedList.head?.getNext()?.getData()).toEqual(2);
+      expect(linkedList.tail?.getData()).toEqual(3);
       expect(linkedList.tail).toBeTruthy();
     });
   });
@@ -54,23 +57,27 @@ describe('LinkedList', () => {
       linkedList.add(2);
       linkedList.add(3);
 
-      linkedList.insert(0, 1);
+      linkedList.insertAt(0, 1);
 
       expect(linkedList.head).toBeTruthy();
-     //expect(linkedList.head.next.data).toEqual(2);
+      expect(linkedList.head?.getData()).toEqual(1);
+      expect(linkedList.head?.getNext()?.getData()).toEqual(2);
+      expect(linkedList.tail?.getData()).toEqual(3);
+
     });
 
     test('should insert a node at a specific index', () => {
       linkedList.add(1);
-      linkedList.add(2);
       linkedList.add(3);
+      linkedList.add(4);
 
-      linkedList.insert(1, 2);
+      linkedList.insertAt(1, 2);
 
       expect(linkedList.head).toBeTruthy();
-     // expect(linkedList.head.next).toBeTruthy();
-      //expect(linkedList.head.next.next.data).toEqual(3);
-      expect(linkedList.tail).toBeTruthy();
+      expect(linkedList.head?.getData()).toEqual(1);
+      expect(linkedList.head?.getNext()?.getData()).toEqual(2);
+      expect(linkedList.head?.getNext()?.getNext()?.getData()).toEqual(3);
+      expect(linkedList.tail?.getData()).toEqual(4);
     });
   });
   /*
