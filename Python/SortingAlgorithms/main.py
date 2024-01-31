@@ -19,11 +19,12 @@ if __name__ == '__main__':
 
     #print(F"Sorted list (selection sort): {sorting_obj.selection_sort()}")
 
+    #print("---------------------------------------------------------------------------------------------------------")
+
+    #print(F"Sorted list (merge sort): {sorting_obj.merge_sort_result()}")
+
     print("---------------------------------------------------------------------------------------------------------")
 
-    print(F"Sorted list (merge sort): {sorting_obj.return_merge_sort_result()}")
-
+    print(F"Sorted list (quick sort): {sorting_obj.quick_sort_result()}")
 
     print("*********************************************************************************************************")
-
-

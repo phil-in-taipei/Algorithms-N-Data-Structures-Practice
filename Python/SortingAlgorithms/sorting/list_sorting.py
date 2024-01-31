@@ -29,6 +29,7 @@ class SortList:
         return self.list_to_sort
 
     def _merge_lists(self, left_list, right_list):
+        #print(F"Merge lists method --- Left: {left_list} -- Right: {right_list}")
         merged_list = []
         left_index = 0
         right_index = 0
@@ -44,15 +45,36 @@ class SortList:
         return merged_list + remaining_left_list + remaining_right_list
 
     def _merge_sort_recursively(self, sorting_list):
+        #print(F"This is the sorting list in the recursive method: {sorting_list}")
         if len(sorting_list) <= 1:
             return sorting_list
         midpoint_in_list = len(sorting_list) // 2
-        left_list = sorting_list[0:midpoint_in_list]
-        right_list = sorting_list[midpoint_in_list:]
+        left_list = self._merge_sort_recursively(sorting_list[0:midpoint_in_list])
+        right_list = self._merge_sort_recursively(sorting_list[midpoint_in_list:])
         return self._merge_lists(left_list, right_list)
 
-    def return_merge_sort_result(self):
+    def merge_sort_result(self):
         return self._merge_sort_recursively(self.list_to_sort)
+
+    def _quick_sort_recursive(self, sorting_list):
+        #print(F"Quick sort recursion with this list: {sorting_list}")
+        if len(sorting_list) <= 1:
+            return sorting_list
+        pivot = sorting_list[len(sorting_list) - 1]
+        left_list = []
+        right_list = []
+        # the range excludes the last element because it is the pivot
+        for i in range(len(sorting_list) - 1):
+            if sorting_list[i] < pivot:
+                left_list.append(sorting_list[i])
+            else:
+                right_list.append(sorting_list[i])
+        left_recursion_value = self._quick_sort_recursive(left_list)
+        right_recursion_value = self._quick_sort_recursive(right_list)
+        return left_recursion_value + [pivot] + right_recursion_value
+
+    def quick_sort_result(self):
+        return self._quick_sort_recursive(self.list_to_sort)
 
     def selection_sort(self):
         for outer_index in range(0, len(self.list_to_sort)):
