@@ -14,6 +14,7 @@ fun main() {
     println("Linked list tail: ${linkedList.tail}")
     println("-----------------------------------------------------------------------------------------------------------")
     println("These are the items in the linked list")
+    println("-----------------------------------------------------------------------------------------------------------")
     linkedList.printAll()
     println("-----------------------------------------------------------------------------------------------------------")
     println("This is the length of the linked list: ${linkedList.length()}")
@@ -35,6 +36,38 @@ fun main() {
     println("-----------------------------------------------------------------------------------------------------------")
     println("These are the items in the linked list")
     linkedList.printAll()
+    println("-----------------------------------------------------------------------------------------------------------")
+    println("This is the node at index 2:")
+    val index2 = linkedList.getAtIndex(2)
+    if (index2 != null) {
+        println(index2.data)
+    } else {
+        println(null)
+    }
+    println("-----------------------------------------------------------------------------------------------------------")
+    println("This is the node at index 3:")
+    val index3 = linkedList.getAtIndex(3)
+    if (index3 != null) {
+        println(index3.data)
+    } else {
+        println(null)
+    }
+    println("-----------------------------------------------------------------------------------------------------------")
+    println("This is the node at index 0:")
+    val index0 = linkedList.getAtIndex(0)
+    if (index0 != null) {
+        println(index0.data)
+    } else {
+        println(null)
+    }
+    println("-----------------------------------------------------------------------------------------------------------")
+    println("This is the node at index 5:")
+    val index5 = linkedList.getAtIndex(5)
+    if (index5 != null) {
+        println(index5.data)
+    } else {
+        println(null)
+    }
     println("-----------------------------------------------------------------------------------------------------------")
     println("Attempting to remove data")
     linkedList.remove(2)

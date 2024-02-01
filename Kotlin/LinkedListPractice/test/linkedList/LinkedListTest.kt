@@ -34,6 +34,12 @@ class LinkedListTest {
     }
 
     @org.junit.jupiter.api.Test
+    fun getAtIndex() {
+        linkedList.getAtIndex(1)?.let { assertEquals(it.data, 2) }
+        linkedList.getAtIndex(0)?.let { assertEquals(it.data, 1) }
+    }
+
+    @org.junit.jupiter.api.Test
     fun insertAt() {
         linkedList.insertAt(1, 3)
         assertTrue(linkedList.contains(3))

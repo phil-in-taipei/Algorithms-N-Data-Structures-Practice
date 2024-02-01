@@ -38,6 +38,27 @@ class LinkedList(
         return null
     }
 
+    fun getAtIndex(index : Int): Node? {
+        if (index == 0) {
+            return if (head != null) {
+                head;
+            } else {
+                null
+            }
+        } else {
+            var currentIndex = 0
+            var currentNode = head
+            while (currentIndex < index && currentNode != null) {
+                currentNode = currentNode.next
+                currentIndex++
+            }
+            if (currentNode != null && index == currentIndex) {
+                return currentNode
+            }
+        }
+        return null
+    }
+
     fun insertAt(index : Int, data : Int) {
         //println("Insert at method called with index ($index) and data ($data)")
         val newNode = Node(data=data, next=null)
