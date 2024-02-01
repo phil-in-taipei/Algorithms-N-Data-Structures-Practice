@@ -14,6 +14,8 @@ public class Main {
         );
         System.out.println("-------------------------------------------------------------------------------------------");
         System.out.println("Sorted using bubble sort: " + arrayListSorting.bubbleSort1().toString());
+        //System.out.println("Sorted using bubble sort: " + arrayListSorting.bubbleSort2().toString());
+
         System.out.println("*******************************************************************************************");
 
     }

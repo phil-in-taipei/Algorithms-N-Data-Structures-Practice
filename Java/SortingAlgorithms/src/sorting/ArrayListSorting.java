@@ -13,15 +13,44 @@ public class ArrayListSorting {
     // note this is from memory and not as well optimized:
     public ArrayList<Integer> bubbleSort1() {
         for (int i = 1; i < this.arrayToSort.size(); i++) {
+            //System.out.println("This is the current array list: " + this.arrayToSort.toString());
+           // System.out.println("Outer loop index(" + i + "); element(" + this.arrayToSort.get(i) + ")");
             for (int j = 1; j < this.arrayToSort.size(); j++) {
+                //System.out.println("Inner loop index(" + j + "); element(" + this.arrayToSort.get(j) + ")");
                 while (this.arrayToSort.get(i) < this.arrayToSort.get(j -1)) {
+                    //System.out.println("Outer: " + this.arrayToSort.get(i) + " is less than Inner: " + this.arrayToSort.get(j -1));
                     Integer temporarySwap = this.arrayToSort.get(j - 1);
                     this.arrayToSort.set(j - 1, this.arrayToSort.get(i));
                     this.arrayToSort.set(i, temporarySwap);
+                    //System.out.println("Swapped them");
                 }
             }
 
         }
         return arrayToSort;
+    }
+
+    public ArrayList<Integer> bubbleSort2() {
+        boolean sortingInProcess = true;
+        while(sortingInProcess) {
+            //System.out.println("--------------------------------------------------------------------------------------");
+            //System.out.println("This is the current array list: " + this.arrayToSort.toString());
+            sortingInProcess = false;
+            for (int i = 1; i < this.arrayToSort.size(); i++) {
+                //System.out.println("--------------------------------------------------------------------------------------");
+                //System.out.println("This is the current array list: " + this.arrayToSort.toString());
+                //System.out.println("This is the element (" + this.arrayToSort.get(i) + ") at index (" + i + ")");
+                //System.out.println("--------------------------------------------------------------------------------------");
+                if (this.arrayToSort.get(i) < this.arrayToSort.get(i -1)) {
+                    //System.out.println("It is less than the previous element ("+ this.arrayToSort.get(i -1)+ ") at index (" + String.valueOf(i - 1) + ")");
+                    Integer temporarySwap = this.arrayToSort.get(i - 1);
+                    this.arrayToSort.set(i - 1, this.arrayToSort.get(i));
+                    this.arrayToSort.set(i, temporarySwap);
+                    //System.out.println("**************Swapping and sorting is in process*******");
+                    sortingInProcess = true;
+                }
+            }
+        }
+        return this.arrayToSort;
     }
 }

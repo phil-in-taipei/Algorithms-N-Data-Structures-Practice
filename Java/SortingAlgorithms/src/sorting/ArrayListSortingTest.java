@@ -28,13 +28,22 @@ class ArrayListSortingTest {
     }
 
     @org.junit.jupiter.api.Test
-    void sort() {
+    void bubbleSort1() {
         assertEquals(
                 this.test1.bubbleSort1().toString(),
                 "[0, 19, 40, 230, 931, 1222, 8998, 89899, 398391]"
         );
         assertEquals(this.test2.bubbleSort1().toString(), "[1, 2, 3, 5, 8]");
         assertEquals(this.test3.bubbleSort1().toString(), "[1, 2, 2, 3, 4, 4]");
+    }
 
+    @org.junit.jupiter.api.Test
+    void bubbleSort2() {
+        assertEquals(
+                this.test1.bubbleSort2().toString(),
+                "[0, 19, 40, 230, 931, 1222, 8998, 89899, 398391]"
+        );
+        assertEquals(this.test2.bubbleSort1().toString(), "[1, 2, 3, 5, 8]");
+        assertEquals(this.test3.bubbleSort1().toString(), "[1, 2, 2, 3, 4, 4]");
     }
 }
