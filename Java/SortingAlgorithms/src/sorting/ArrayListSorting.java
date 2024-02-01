@@ -1,6 +1,9 @@
 package sorting;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ArrayListSorting {
 
@@ -53,4 +56,33 @@ public class ArrayListSorting {
         }
         return this.arrayToSort;
     }
+
+    public ArrayList<Integer> quickSort() {
+        return this.quickSortRecursions(this.arrayToSort);
+    }
+
+    private ArrayList<Integer> quickSortRecursions(ArrayList<Integer> currentlySortingList) {
+        if (currentlySortingList.size() <= 1) {
+            return currentlySortingList;
+        }
+        Integer pivot = currentlySortingList.get(currentlySortingList.size() - 1);
+        ArrayList<Integer> leftArrayList = new ArrayList<Integer>();
+        ArrayList<Integer> rightArrayList = new ArrayList<Integer>();
+        for (int i = 0; i < currentlySortingList.size() - 1; i++) {
+            if (currentlySortingList.get(i) < pivot) {
+                leftArrayList.add(currentlySortingList.get(i));
+            } else {
+                rightArrayList.add(currentlySortingList.get(i));
+            }
+        }
+        ArrayList<Integer> leftSortResult = this.quickSortRecursions(leftArrayList);
+        // add pivot to the end of the left sort result (so it is between it and the right)
+        leftSortResult.add(pivot);
+        ArrayList<Integer> rightSortResult = this.quickSortRecursions(rightArrayList);
+        return (ArrayList<Integer>) Stream.concat(
+                leftSortResult.stream(), rightSortResult.stream()
+        ).collect(Collectors.toList());
+    }
+
+
 }

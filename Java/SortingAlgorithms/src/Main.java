@@ -13,9 +13,9 @@ public class Main {
                 new ArrayList<Integer>(Arrays.asList(3, 9, 1, 8, 2, 7, 5, 4, 6))
         );
         System.out.println("-------------------------------------------------------------------------------------------");
-        System.out.println("Sorted using bubble sort: " + arrayListSorting.bubbleSort1().toString());
+        //System.out.println("Sorted using bubble sort: " + arrayListSorting.bubbleSort1().toString());
         //System.out.println("Sorted using bubble sort: " + arrayListSorting.bubbleSort2().toString());
-
+        System.out.println("Sorted using quick sort: " + arrayListSorting.quickSort().toString());
         System.out.println("*******************************************************************************************");
 
     }
