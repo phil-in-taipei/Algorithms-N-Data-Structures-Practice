@@ -38,19 +38,30 @@ describe('LinkedList', () => {
       consoleSpy.mockRestore();
     });
   });
-  /*
+  
   describe('get', () => {
     test('should get a single node at a specific index', () => {
       linkedList.add(1);
       linkedList.add(2);
       linkedList.add(3);
-
-      expect(linkedList.get(0)).toBe(1);
-      expect(linkedList.get(1)).toBe(2);
-      expect(linkedList.get(2)).toBe(3);
+      expect(linkedList.get(1)?.getData()).toEqual(1);
+      expect(linkedList.get(2)?.getData()).toEqual(2);
+      expect(linkedList.get(3)?.getData()).toEqual(3);
     });
   });
-  */
+
+  describe('getAtIndex', () => {
+    test('should get a single node at a specific index', () => {
+      linkedList.add(1);
+      linkedList.add(2);
+      linkedList.add(3);
+      expect(linkedList.getAtIndex(0)?.getData()).toEqual(1);
+      expect(linkedList.getAtIndex(1)?.getData()).toEqual(2);
+      expect(linkedList.getAtIndex(2)?.getData()).toEqual(3);
+      expect(linkedList.getAtIndex(3)).toBeFalsy();
+    });
+  });
+  
 
   describe('insertAt', () => {
     test('should insert a node at the beginning of the list', () => {
@@ -80,16 +91,16 @@ describe('LinkedList', () => {
       expect(linkedList.tail?.getData()).toEqual(4);
     });
   });
-  /*
-  describe('removeFrom', () => {
+  
+  describe('removeAt', () => {
     test('should remove a node from the beginning of the list', () => {
       linkedList.add(1);
       linkedList.add(2);
-      linkedList.add('3);
+      linkedList.add(3);
 
-      linkedList.removeFrom(0);
+      linkedList.removeAt(0);
 
-      expect(linkedList.head.data).toEqual('B');
+      expect(linkedList.head?.getData()).toEqual(2);
     });
 
     test('should remove a node from a specific index', () => {
@@ -98,14 +109,13 @@ describe('LinkedList', () => {
       linkedList.add(3);
       linkedList.add(4);
 
-      linkedList.removeFrom(1);
+      linkedList.removeAt(1);
 
-      expect(linkedList.head.data).toEqual('A');
-      expect(linkedList.head.next.data).toEqual('C');
-      expect(linkedList.tail.data).toEqual('D');
+      expect(linkedList.head?.data).toEqual(1);
+      expect(linkedList.head?.next?.getData()).toEqual(3);
+      expect(linkedList.tail?.getData()).toEqual(4);
     });
   });
-  */
 });
 
 export {}
