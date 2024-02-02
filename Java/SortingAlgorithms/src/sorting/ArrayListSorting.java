@@ -57,6 +57,34 @@ public class ArrayListSorting {
         return this.arrayToSort;
     }
 
+    public ArrayList<Integer> insertionSort() {
+        int forLoopNumber = 0;
+        for (int i = 1; i < this.arrayToSort.size(); i++) {
+            //forLoopNumber++;
+            //System.out.println("`````````````````````````````````````````````````````````````````````````````````````");
+            //System.out.println("For loop (" + forLoopNumber + "): " + this.arrayToSort.toString());
+            int currentItem = this.arrayToSort.get(i);
+            //System.out.println("This is the element: " + currentItem);
+            int sortedInsertionIndex = i - 1;
+            //System.out.println("This is the sorted insertion index: " + sortedInsertionIndex);
+            int whileLoopNumber = 0;
+            while(sortedInsertionIndex >= 0 && currentItem < this.arrayToSort.get(sortedInsertionIndex)) {
+                //System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+                //whileLoopNumber++;
+                //System.out.println("While loop (" + whileLoopNumber + "): " + this.arrayToSort.toString());
+                //System.out.println("This is the element: " + currentItem +", and it is lower than " + this.arrayToSort.get(sortedInsertionIndex));
+                this.arrayToSort.set(sortedInsertionIndex + 1, this.arrayToSort.get(sortedInsertionIndex));
+                //System.out.println("Setting item after index: " + sortedInsertionIndex + " item: " + this.arrayToSort.get(sortedInsertionIndex) + " to the same");
+                //System.out.println("Altered array: " +  this.arrayToSort.toString());
+                sortedInsertionIndex--;
+                //System.out.println("Reset sorted insertion index: " + sortedInsertionIndex);
+            }
+            //System.out.println("While loop ended: setting index above sorted insertion index (" + sortedInsertionIndex + ") to " + currentItem);
+            this.arrayToSort.set(sortedInsertionIndex + 1, currentItem);
+        }
+        return this.arrayToSort;
+    }
+
     public ArrayList<Integer> quickSort() {
         return this.quickSortRecursions(this.arrayToSort);
     }
