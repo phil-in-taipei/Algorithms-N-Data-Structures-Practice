@@ -57,7 +57,7 @@ public class ArrayListSorting {
     }
 
     public ArrayList<Integer> insertionSort() {
-        int forLoopNumber = 0;
+        //int forLoopNumber = 0;
         for (int i = 1; i < this.arrayToSort.size(); i++) {
             //forLoopNumber++;
             //System.out.println("`````````````````````````````````````````````````````````````````````````````````````");
@@ -66,7 +66,7 @@ public class ArrayListSorting {
             //System.out.println("This is the element: " + currentItem);
             int sortedInsertionIndex = i - 1;
             //System.out.println("This is the sorted insertion index: " + sortedInsertionIndex);
-            int whileLoopNumber = 0;
+            //int whileLoopNumber = 0;
             while(sortedInsertionIndex >= 0 && currentItem < this.arrayToSort.get(sortedInsertionIndex)) {
                 //System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
                 //whileLoopNumber++;

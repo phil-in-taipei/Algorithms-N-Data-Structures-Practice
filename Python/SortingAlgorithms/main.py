@@ -1,4 +1,5 @@
 from sorting_functions.selection_sort import selection_sort
+from sorting_functions.insertion_sort import insertion_sort
 from sorting.list_sorting import SortList
 
 # Press the green button in the gutter to run the script.
@@ -29,7 +30,12 @@ if __name__ == '__main__':
 
     print("*********************************************************************************************************")
     print("Sorting using selection sort function:")
-    sorting_result = selection_sort([3, 9, 2, 7, 1, 4, 6, 8, 5])
+    selection_sorting_result = selection_sort([3, 9, 2, 7, 1, 4, 6, 8, 5])
     print("---------------------------------------------------------------------------------------------------------")
-    print(sorting_result)
+    print(selection_sorting_result)
+    print("---------------------------------------------------------------------------------------------------------")
+    print("Sorting using insertion sort function:")
+    insertion_sorting_result = insertion_sort([3, 9, 2, 7, 1, 4, 6, 8, 5])
+    print("---------------------------------------------------------------------------------------------------------")
+    print(insertion_sorting_result)
     print("---------------------------------------------------------------------------------------------------------")
