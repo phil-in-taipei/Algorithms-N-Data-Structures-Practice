@@ -16,8 +16,8 @@ public class Main {
         //System.out.println("Sorted using bubble sort: " + arrayListSorting.bubbleSort1().toString());
         //System.out.println("Sorted using bubble sort: " + arrayListSorting.bubbleSort2().toString());
         //System.out.println("Sorted using quick sort: " + arrayListSorting.quickSort().toString());
-        System.out.println("Sorted using insertion sort: " + arrayListSorting.insertionSort().toString());
-
+        //System.out.println("Sorted using insertion sort: " + arrayListSorting.insertionSort().toString());
+        System.out.println("Sorted using selection sort: " + arrayListSorting.selectionSort().toString());
         System.out.println("*******************************************************************************************");
 
     }

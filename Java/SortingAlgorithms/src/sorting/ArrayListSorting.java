@@ -1,7 +1,6 @@
 package sorting;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -110,6 +109,37 @@ public class ArrayListSorting {
         return (ArrayList<Integer>) Stream.concat(
                 leftSortResult.stream(), rightSortResult.stream()
         ).collect(Collectors.toList());
+    }
+
+    public ArrayList<Integer> selectionSort() {
+        //int outerIteration = 0;
+        for (int outerIndex = 0; outerIndex < this.arrayToSort.size(); outerIndex++) {
+            //System.out.println("`````````````````````````````````````````````````````````````````````````````````````````");
+            //outerIteration++;
+            //System.out.println("Iteration number: " + outerIteration + "; values: " + this.arrayToSort);
+            int lowestValueIndex = outerIndex;
+            //System.out.println("Lowest value index: " + lowestValueIndex + "; element: " + this.arrayToSort.get(lowestValueIndex));
+            //int innerIteration = 0;
+            for (int innerIndex = outerIndex + 1; innerIndex < this.arrayToSort.size(); innerIndex++) {
+                //innerIteration++;
+                //System.out.println("**** Inner iteration number: " + innerIteration + "; with lowest value index: " + lowestValueIndex);
+                //System.out.println("and inner index: " + innerIndex + " *******");
+                if (this.arrayToSort.get(lowestValueIndex) > this.arrayToSort.get(innerIndex)) {
+                    //System.out.println("Value (" + this.arrayToSort.get(lowestValueIndex) + ") is higher than (" + this.arrayToSort.get(innerIndex) + ")");
+                    //System.out.println("Change lowestValueIndex (" + lowestValueIndex + ") to inner index (" + innerIndex + ")");
+                    lowestValueIndex = innerIndex;
+                }
+            }
+            //System.out.println("++++++++++++++++++++++++Inner Loop Finished++++++++++++++++++++++++++++++++++++++++");
+            if (lowestValueIndex != outerIndex) {
+                //System.out.println("Lowest value index: " + lowestValueIndex + " is not same as outer index: " + outerIndex);
+                int temporarySwap = this.arrayToSort.get(outerIndex);
+                //System.out.println("Swap " + this.arrayToSort.get(lowestValueIndex) + " with " + this.arrayToSort.get(outerIndex));
+                this.arrayToSort.set(outerIndex, this.arrayToSort.get(lowestValueIndex));
+                this.arrayToSort.set(lowestValueIndex, temporarySwap);
+            }
+        }
+        return this.arrayToSort;
     }
 
 
