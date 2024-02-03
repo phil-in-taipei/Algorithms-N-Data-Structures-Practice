@@ -63,6 +63,55 @@ public class DoublyLinkedList {
         return "NODE AT INDEX " + index + ": [ERROR: NO NODE FOUND]";
     }
 
+    public String getHead() {
+        if (this.head == null) {
+            return "Head is null";
+        } else {
+            return "HEAD: [" + this.head.toString() + "]";
+        }
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public String getTail() {
+        if (this.tail == null) {
+            return "Tail is null";
+        } else {
+            return "TAIL: ["  + this.tail.toString() + "]";
+        }
+    }
+
+    public void insertAt(int index, int data) {
+        if (index > this.length) {
+            return;
+        } else if (index == this.length) {
+            this.append(data);
+        } else if (index == 0) {
+            this.prepend(data);
+        } else {
+            DLLNode currentNode = this.head;
+            int currentIndex =  0;
+            while (currentIndex < index
+                    && currentIndex< this.length
+                    && currentNode.next != null
+            ) {
+                System.out.println(currentNode.toString());
+                currentNode = currentNode.next;
+                currentIndex++;
+            }
+            DLLNode newNode = new DLLNode(data);
+            if (currentNode.previous != null) {
+                newNode.previous = currentNode.previous;
+                currentNode.previous.next = newNode;
+                currentNode.previous = newNode;
+                newNode.next = currentNode;
+                this.length++;
+            }
+        }
+    }
+
     public void prepend(int data) {
         DLLNode newNode = new DLLNode(data);
         if (length == 0) {
@@ -103,23 +152,38 @@ public class DoublyLinkedList {
         }
     }
 
-    public String getHead() {
-        if (this.head == null) {
-            return "Head is null";
+    public void removeFrom(int index) {
+        if (index >= this.length || index < 0 || this.head == null || this.tail == null) {
+            return;
+        } else if (index == 0) {
+            if(this.head.next != null) {
+                this.head.next.previous = null;
+                this.head = this.head.next;
+            } else {
+                this.head = null;
+            }
+            this.length--;
+        } else if (index == this.length - 1) {
+            if(this.tail.previous != null) {
+                this.tail.previous.next = null;
+                this.tail = this.tail.previous;
+                this.length--;
+            }
         } else {
-            return "HEAD: [" + this.head.toString() + "]";
+            DLLNode currentNode = this.head;
+            int currentIndex =  0;
+            while (currentIndex < index && currentNode.next != null
+            ) {
+                currentNode = currentNode.next;
+                currentIndex++;
+            }
+            if (currentNode.previous != null) {
+                currentNode.previous.next = currentNode.next;
+                assert currentNode.next != null;
+                currentNode.next.previous = currentNode.previous;
+                this.length--;
+            }
         }
     }
 
-    public String getTail() {
-        if (this.tail == null) {
-            return "Tail is null";
-        } else {
-            return "TAIL: ["  + this.tail.toString() + "]";
-        }
-    }
-
-    public int getLength() {
-        return length;
-    }
 }

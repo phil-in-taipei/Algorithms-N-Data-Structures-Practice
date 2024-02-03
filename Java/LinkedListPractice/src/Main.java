@@ -78,6 +78,29 @@ public class Main {
         System.out.println(doublyLinkedList.getDebugInfo(2));
         System.out.println(doublyLinkedList.getDebugInfo(5));
         System.out.println("-------------------------------------------------------------------------------------------");
-
+        doublyLinkedList.insertAt(0, 150);
+        System.out.println("Inserted 150 at index 0");
+        System.out.println("-------------------------------------------------------------------------------------------");
+        doublyLinkedList.printAll();
+        System.out.println("-------------------------------------------------------------------------------------------");
+        doublyLinkedList.printAllReverse();
+        System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println(doublyLinkedList.getHead());
+        System.out.println(doublyLinkedList.getTail());
+        System.out.println(doublyLinkedList.getDebugInfo(0));
+        System.out.println("Length: " + doublyLinkedList.getLength());
+        System.out.println("-------------------------------------------------------------------------------------------");
+        doublyLinkedList.removeFrom(1);
+        System.out.println("Removed item from index 1");
+        System.out.println("-------------------------------------------------------------------------------------------");
+        doublyLinkedList.printAll();
+        System.out.println("-------------------------------------------------------------------------------------------");
+        doublyLinkedList.printAllReverse();
+        System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println(doublyLinkedList.getHead());
+        System.out.println(doublyLinkedList.getTail());
+        System.out.println(doublyLinkedList.getDebugInfo(1));
+        System.out.println("Length: " + doublyLinkedList.getLength());
+        System.out.println("-------------------------------------------------------------------------------------------");
     }
 }
