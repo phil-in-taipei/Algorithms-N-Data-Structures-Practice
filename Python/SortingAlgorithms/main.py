@@ -1,6 +1,7 @@
 from sorting_functions.selection_sort import selection_sort
 from sorting_functions.insertion_sort import insertion_sort
 from sorting.list_sorting import SortList
+from sorting_functions.bubble_sort import bubble_sort1, bubble_sort2
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
@@ -38,4 +39,14 @@ if __name__ == '__main__':
     insertion_sorting_result = insertion_sort([3, 9, 2, 7, 1, 4, 6, 8, 5])
     print("---------------------------------------------------------------------------------------------------------")
     print(insertion_sorting_result)
+    print("*********************************************************************************************************")
+    print("Sorting using bubble sort function 1:")
+    bubble_sort_result1 = bubble_sort1([3, 9, 2, 7, 1, 4, 6, 8, 5])
+    print("---------------------------------------------------------------------------------------------------------")
+    print(bubble_sort_result1)
+    print("---------------------------------------------------------------------------------------------------------")
+    print("Sorting using bubble sort function 2:")
+    bubble_sort_result2 = bubble_sort2([3, 9, 2, 7, 1, 4, 6, 8, 5])
+    print("---------------------------------------------------------------------------------------------------------")
+    print(bubble_sort_result2)
     print("---------------------------------------------------------------------------------------------------------")
