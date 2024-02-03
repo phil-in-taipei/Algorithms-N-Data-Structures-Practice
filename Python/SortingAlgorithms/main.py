@@ -3,6 +3,7 @@ from sorting_functions.insertion_sort import insertion_sort
 from sorting.list_sorting import SortList
 from sorting_functions.bubble_sort import bubble_sort1, bubble_sort2
 from sorting_functions.merge_sort import merge_sort
+from sorting_functions.quick_sort import quick_sort
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
@@ -55,4 +56,9 @@ if __name__ == '__main__':
     merge_sort_result = merge_sort([3, 9, 2, 7, 1, 4, 6, 8, 5])
     print("---------------------------------------------------------------------------------------------------------")
     print(merge_sort_result)
+    print("---------------------------------------------------------------------------------------------------------")
+    print("Sorting using quick sort:")
+    quick_sort_result = quick_sort([3, 9, 2, 7, 1, 4, 6, 8, 5])
+    print("---------------------------------------------------------------------------------------------------------")
+    print(quick_sort_result)
     print("---------------------------------------------------------------------------------------------------------")
