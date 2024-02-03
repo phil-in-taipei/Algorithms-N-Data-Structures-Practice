@@ -2,6 +2,7 @@ from sorting_functions.selection_sort import selection_sort
 from sorting_functions.insertion_sort import insertion_sort
 from sorting.list_sorting import SortList
 from sorting_functions.bubble_sort import bubble_sort1, bubble_sort2
+from sorting_functions.merge_sort import merge_sort
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
@@ -49,4 +50,9 @@ if __name__ == '__main__':
     bubble_sort_result2 = bubble_sort2([3, 9, 2, 7, 1, 4, 6, 8, 5])
     print("---------------------------------------------------------------------------------------------------------")
     print(bubble_sort_result2)
+    print("---------------------------------------------------------------------------------------------------------")
+    print("Sorting using merge sort (with helper function):")
+    merge_sort_result = merge_sort([3, 9, 2, 7, 1, 4, 6, 8, 5])
+    print("---------------------------------------------------------------------------------------------------------")
+    print(merge_sort_result)
     print("---------------------------------------------------------------------------------------------------------")
