@@ -58,6 +58,16 @@ class ArrayListSortingTest {
     }
 
     @org.junit.jupiter.api.Test
+    void mergeSortResult() {
+        assertEquals(
+                this.test1.mergeSortResult().toString(),
+                "[0, 19, 40, 230, 931, 1222, 8998, 89899, 398391]"
+        );
+        assertEquals(this.test2.mergeSortResult().toString(), "[1, 2, 3, 5, 8]");
+        assertEquals(this.test3.mergeSortResult().toString(), "[1, 2, 2, 3, 4, 4]");
+    }
+
+    @org.junit.jupiter.api.Test
     void quickSort() {
         assertEquals(
                 this.test1.quickSort().toString(),

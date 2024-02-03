@@ -1,6 +1,7 @@
 package sorting;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -82,6 +83,45 @@ public class ArrayListSorting {
             this.arrayToSort.set(sortedInsertionIndex + 1, currentItem);
         }
         return this.arrayToSort;
+    }
+
+    private ArrayList<Integer> merge(ArrayList<Integer> leftList, ArrayList<Integer> rightList) {
+        int leftIndex = 0;
+        int rightIndex = 0;
+        ArrayList<Integer> sortedItems = new ArrayList<>();
+        while(leftIndex < leftList.size() && rightIndex < rightList.size()) {
+            if (leftList.get(leftIndex) < rightList.get(rightIndex)) {
+                sortedItems.add(leftList.get(leftIndex));
+                leftIndex++;
+            } else {
+                sortedItems.add(rightList.get(rightIndex));
+                rightIndex++;
+            }
+        }
+        // after sorting append the remaining left then right items to the sortedItems ArrayList
+        sortedItems.addAll(leftList.subList(leftIndex,leftList.size()));
+        return (ArrayList<Integer>) Stream.concat(
+                sortedItems.stream(),
+                rightList.subList(rightIndex, rightList.size()).stream()
+                ).collect(Collectors.toList());
+    }
+
+    // note: had issue casting List to ArrayList -- commented out shows issue with original approach
+    private ArrayList<Integer> mergeSort(List<Integer> arrayList) { //(ArrayList<Integer> arrayList
+        if (arrayList.size() <= 1) {
+            //return arrayList;
+            return new ArrayList<>(arrayList);
+        }
+       int midPoint = arrayList.size() / 2;
+        //ArrayList<Integer> leftList = mergeSort((ArrayList<Integer>) arrayList.subList(0, midPoint));
+        //ArrayList<Integer> rightList = mergeSort((ArrayList<Integer>) arrayList.subList(midPoint, arrayList.size()));
+        List<Integer> leftList = mergeSort(arrayList.subList(0, midPoint));
+        List<Integer> rightList = mergeSort(arrayList.subList(midPoint, arrayList.size()));
+        return merge(new ArrayList<>(leftList), new ArrayList<>(rightList));
+    }
+
+    public ArrayList<Integer> mergeSortResult() {
+        return mergeSort(this.arrayToSort);
     }
 
     public ArrayList<Integer> quickSort() {
