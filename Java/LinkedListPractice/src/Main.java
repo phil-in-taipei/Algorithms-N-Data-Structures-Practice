@@ -52,6 +52,7 @@ public class Main {
         doublyLinkedList.append(200);
         doublyLinkedList.append(300);
         doublyLinkedList.append(400);
+        doublyLinkedList.prepend(50);
         System.out.println("-------------------------------------------------------------------------------------------");
         System.out.println("Printing Items in Doubly Linked List:");
         System.out.println("-------------------------------------------------------------------------------------------");
@@ -65,7 +66,17 @@ public class Main {
         System.out.println("-------------------------------------------------------------------------------------------");
         System.out.println(doublyLinkedList.getTail());
         System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println("Contains 50: " + doublyLinkedList.contains(50));
+        System.out.println("Contains 200: " + doublyLinkedList.contains(200));
+        System.out.println("Contains 400: " + doublyLinkedList.contains(400));
+        System.out.println("Contains 500: " + doublyLinkedList.contains(500));
+        System.out.println("-------------------------------------------------------------------------------------------");
         System.out.println("Length is: " + doublyLinkedList.getLength());
+        System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println(doublyLinkedList.get(4));
+        System.out.println(doublyLinkedList.getDebugInfo(4));
+        System.out.println(doublyLinkedList.getDebugInfo(2));
+        System.out.println(doublyLinkedList.getDebugInfo(5));
         System.out.println("-------------------------------------------------------------------------------------------");
 
     }

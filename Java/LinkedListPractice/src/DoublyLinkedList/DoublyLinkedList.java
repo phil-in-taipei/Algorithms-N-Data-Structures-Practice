@@ -26,6 +26,43 @@ public class DoublyLinkedList {
         this.length++;
     }
 
+    public boolean contains(int data) {
+        DLLNode currentNode = this.head;
+        while (currentNode != null) {
+            if (currentNode.data == data) {
+                return true;
+            }
+            currentNode = currentNode.next;
+        }
+        return false;
+    }
+
+    public Object get(int index) {
+        int currentIndex = 0;
+        DLLNode currentNode = this.head;
+        while (currentNode != null) {
+            if (index == currentIndex) {
+                return currentNode.data;
+            }
+            currentNode = currentNode.next;
+            currentIndex++;
+        }
+        return null;
+    }
+
+    public String getDebugInfo(int index) {
+        int currentIndex = 0;
+        DLLNode currentNode = this.head;
+        while (currentNode != null) {
+            if (index == currentIndex) {
+                return "NODE AT INDEX " + index + ": [" + currentNode.toString() + "]";
+            }
+            currentNode = currentNode.next;
+            currentIndex++;
+        }
+        return "NODE AT INDEX " + index + ": [ERROR: NO NODE FOUND]";
+    }
+
     public void prepend(int data) {
         DLLNode newNode = new DLLNode(data);
         if (length == 0) {
@@ -70,7 +107,7 @@ public class DoublyLinkedList {
         if (this.head == null) {
             return "Head is null";
         } else {
-            return this.head.toString();
+            return "HEAD: [" + this.head.toString() + "]";
         }
     }
 
@@ -78,7 +115,7 @@ public class DoublyLinkedList {
         if (this.tail == null) {
             return "Tail is null";
         } else {
-            return this.tail.toString();
+            return "TAIL: ["  + this.tail.toString() + "]";
         }
     }
 
