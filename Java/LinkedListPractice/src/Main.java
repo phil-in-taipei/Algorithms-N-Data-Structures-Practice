@@ -1,8 +1,10 @@
+import DoublyLinkedList.DoublyLinkedList;
 import LinkedList.LinkedList;
 
 
 public class Main {
     public static void main(String[] args) {
+        /*
         System.out.println("-------------------------------------------------------------------------------------------");
         System.out.println("Initializing new linked list");
         LinkedList linkedList = new LinkedList(10);
@@ -43,5 +45,28 @@ public class Main {
         System.out.println("-------------------------------------------------------------------------------------------");
         linkedList.printAll();
         System.out.println("-------------------------------------------------------------------------------------------");
+      */
+        System.out.println("Initializing new doubly linked list");
+        DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+        doublyLinkedList.append(100);
+        doublyLinkedList.append(200);
+        doublyLinkedList.append(300);
+        doublyLinkedList.append(400);
+        System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println("Printing Items in Doubly Linked List:");
+        System.out.println("-------------------------------------------------------------------------------------------");
+        doublyLinkedList.printAll();
+        System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println("Printing Items in Doubly Linked List in reverse:");
+        System.out.println("-------------------------------------------------------------------------------------------");
+        doublyLinkedList.printAllReverse();
+        System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println(doublyLinkedList.getHead());
+        System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println(doublyLinkedList.getTail());
+        System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println("Length is: " + doublyLinkedList.getLength());
+        System.out.println("-------------------------------------------------------------------------------------------");
+
     }
 }
