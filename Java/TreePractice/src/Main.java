@@ -1,3 +1,4 @@
+import bst.BinarySearchTree;
 import node.TreeNode;
 import traversal.TreeTraversal;
 
@@ -37,9 +38,44 @@ public class Main {
         ArrayList<String> depth1stAlt = treeTraversal.getDepthTreeDataRightToLeft();
         System.out.println("-------------------------------------------------------------------------------------------");
 
-        System.out.println("*****Experiment*******");
-        System.out.println(depth1stAlt.toString());
-        System.out.println("*****Experiment*******");
+        //System.out.println("*****Experiment*******");
+        //System.out.println(depth1stAlt.toString());
+        //System.out.println("*****Experiment*******");
+        System.out.println("*******************************************************************************************");
+        System.out.println("Binary Search Tree implementation");
+        TreeNode jessica = new TreeNode("jessica");
+        BinarySearchTree binarySearchTree = new BinarySearchTree(jessica);
+        binarySearchTree.insert("alice");
+        binarySearchTree.insert("ramona");
+        binarySearchTree.insert("laurie");
+        binarySearchTree.insert("xiaohan");
+        binarySearchTree.insert("bert");
+        binarySearchTree.insert("joshua");
+        System.out.println("-------------------------------------------------------------------------------------------");
+        binarySearchTree.printAll();
+        System.out.println("-------------------------------------------------------------------------------------------");
+        TreeNode lookup1 = (TreeNode) binarySearchTree.lookup("bert");
+        if (lookup1 != null) {
+            System.out.println(lookup1.getData());
+        } else {
+            System.out.println("Lookup failed");
+        }
+        System.out.println("-------------------------------------------------------------------------------------------");
+
+        TreeNode lookup2 = (TreeNode) binarySearchTree.lookup("ding-dong");
+        if (lookup2 != null) {
+            System.out.println(lookup2.getData());
+        } else {
+            System.out.println("Lookup failed");
+        }
+        System.out.println("-------------------------------------------------------------------------------------------");
+
+        TreeNode lookup3 = (TreeNode) binarySearchTree.lookup("xiaohan");
+        if (lookup3 != null) {
+            System.out.println(lookup3.getData());
+        } else {
+            System.out.println("Lookup failed");
+        }
         System.out.println("-------------------------------------------------------------------------------------------");
 
     }
