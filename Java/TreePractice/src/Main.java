@@ -27,11 +27,19 @@ public class Main {
         ArrayList<String> depthFirst = treeTraversal.getBreadthFirstTreeData();
         System.out.println(depthFirst.toString());
         System.out.println("-------------------------------------------------------------------------------------------");
-
+        ArrayList<String> breadth1stAlt = treeTraversal.getBreadthRightToLeft();
         System.out.println("-------------------------------------------------------------------------------------------");
 
+        System.out.println("*****Experiment*******");
+        System.out.println(breadth1stAlt.toString());
+        System.out.println("*****Experiment*******");
+        System.out.println("-------------------------------------------------------------------------------------------");
+        ArrayList<String> depth1stAlt = treeTraversal.getDepthTreeDataRightToLeft();
+        System.out.println("-------------------------------------------------------------------------------------------");
 
-
+        System.out.println("*****Experiment*******");
+        System.out.println(depth1stAlt.toString());
+        System.out.println("*****Experiment*******");
         System.out.println("-------------------------------------------------------------------------------------------");
 
     }

@@ -40,6 +40,25 @@ public class TreeTraversal {
         return this.nodesInTreeData;
     }
 
+    // experiment switching left / right order
+    public ArrayList<String> getBreadthRightToLeft() {
+        this.clearNodesInTreeData();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(this.rootNode);
+        while(!queue.isEmpty()) {
+            TreeNode currentNode = queue.remove();
+            this.addNodeData(currentNode);
+
+            if (currentNode.getRight() != null) {
+                queue.add(currentNode.getRight());
+            }
+            if (currentNode.getLeft() != null) {
+                queue.add(currentNode.getLeft());
+            }
+        }
+        return this.nodesInTreeData;
+    }
+
     public ArrayList<String> getDepthFirstTreeData() {
         this.clearNodesInTreeData();
         Stack<TreeNode> stack = new Stack<TreeNode>();
@@ -52,6 +71,24 @@ public class TreeTraversal {
             }
             if(currentNode.getLeft() != null) {
                 stack.add(currentNode.getLeft());
+            }
+        }
+        return this.nodesInTreeData;
+    }
+
+    // experiment switching left / right order
+    public ArrayList<String> getDepthTreeDataRightToLeft() {
+        this.clearNodesInTreeData();
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        stack.add(this.rootNode);
+        while(!stack.empty()) {
+            TreeNode currentNode = stack.pop();
+            this.addNodeData(currentNode);
+            if(currentNode.getLeft() != null) {
+                stack.add(currentNode.getLeft());
+            }
+            if(currentNode.getRight() != null) {
+                stack.add(currentNode.getRight());
             }
         }
         return this.nodesInTreeData;
