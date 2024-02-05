@@ -77,6 +77,16 @@ public class Main {
             System.out.println("Lookup failed");
         }
         System.out.println("-------------------------------------------------------------------------------------------");
-
+        System.out.println("Removing jessica");
+        binarySearchTree.remove("jessica");
+        System.out.println("-------------------------------------------------------------------------------------------");
+        binarySearchTree.printAll();
+        System.out.println("-------------------------------------------------------------------------------------------");
+        TreeNode currentRoot = (TreeNode) binarySearchTree.getRoot();
+        if (currentRoot == null) {
+            System.out.println("There is no root");
+        } else {
+            System.out.println("This is the root data: " + currentRoot.getData());
+        }
     }
 }

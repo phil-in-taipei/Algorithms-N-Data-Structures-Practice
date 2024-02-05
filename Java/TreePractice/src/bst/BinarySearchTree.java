@@ -10,9 +10,13 @@ public class BinarySearchTree {
         this.root = rootNode;
     }
 
+    public Object getRoot() {
+        return this.root;
+    }
+
 
     public void insert(String data) {
-        System.out.println("``````Inserting``````````");
+        //System.out.println("``````Inserting``````````");
         TreeNode newNode = new TreeNode(data);
         //System.out.println("This is the new node data: " + newNode.getData());
         if (this.root == null) {
@@ -84,6 +88,59 @@ public class BinarySearchTree {
         System.out.println(currentNode.getData());
         if (currentNode.getRight() != null) {
             printNodeRecursive(currentNode.getRight());
+        }
+    }
+
+    public void remove(String data) {
+        this.removeRecursive(this.root, data);
+    }
+
+    private TreeNode removeRecursive(TreeNode currentNode, String data) {
+        System.out.println("-*--*--*--*--*--*--*--*Recursion--*--*--*--*--*--*--*--*--*-");
+        if (currentNode == null) {
+            System.out.println("Node is null -- unwind");
+            return null;
+        }
+        System.out.println("Current node: " + currentNode.getData());
+        int comparison = data.compareTo(currentNode.getData());
+        System.out.println("Comparison value: " + comparison);
+        if(comparison < 0) {
+            // value is lower, so go to the left child
+            System.out.println("Lower -- go left");
+            currentNode.setLeft(removeRecursive(currentNode.getLeft(), data));
+            return currentNode;
+        } else if (comparison > 0) {
+            // value is higher, so go to the right child
+            System.out.println("Higher -- go right");
+            currentNode.setRight(removeRecursive(currentNode.getRight(), data));
+            return currentNode;
+        } else {
+            // the value is the same as the current node
+            System.out.println("Equal value");
+            if (currentNode.getLeft() == null) {
+                // no left child, so return the right child
+                System.out.println("No left -- go right");
+                return currentNode.getRight();
+            } else if (currentNode.getRight() == null) {
+                // no right child, so return the left child
+                System.out.println("No right -- go left");
+                return currentNode.getLeft();
+            } else {
+                // It has both left and right child nodes, so find the lowest child node on the right side
+                // It will be the next highest value node in the tree, so it will replace the removed node
+                // iterate through until it no longer has any left (lower) children
+                TreeNode successorNodeCandidate = currentNode.getRight();
+                while (successorNodeCandidate.getLeft() != null) {
+                    successorNodeCandidate = successorNodeCandidate.getLeft();
+                }
+                // replace node with value
+                System.out.println("Replacement node: " + successorNodeCandidate.getData());
+                currentNode.setData(successorNodeCandidate.getData());
+                // remove successor node from right tree
+                System.out.println("Now cleanup right side of tree...");
+                currentNode.setRight(removeRecursive(currentNode.getRight(), successorNodeCandidate.getData()));
+                return currentNode;
+            }
         }
     }
 }
