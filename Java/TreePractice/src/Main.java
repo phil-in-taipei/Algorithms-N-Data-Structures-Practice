@@ -20,12 +20,12 @@ public class Main {
         nodeC.setLeft(nodeF);
         System.out.println("-------------------------------------------------------------------------------------------");
         TreeTraversal treeTraversal = new TreeTraversal(root);
-        ArrayList<String> breadthFirst = treeTraversal.getDepthFirstTreeData();
-        System.out.println(breadthFirst.toString());
+        ArrayList<String> depthFirst = treeTraversal.getDepthFirstTreeData();
+        System.out.println("Depth first: " + depthFirst.toString());
         System.out.println("-------------------------------------------------------------------------------------------");
 
-        ArrayList<String> depthFirst = treeTraversal.getBreadthFirstTreeData();
-        System.out.println(depthFirst.toString());
+        ArrayList<String> breadthFirst = treeTraversal.getBreadthFirstTreeData();
+        System.out.println("Breadth first: " + breadthFirst.toString());
         System.out.println("-------------------------------------------------------------------------------------------");
         ArrayList<String> breadth1stAlt = treeTraversal.getBreadthRightToLeft();
         System.out.println("-------------------------------------------------------------------------------------------");

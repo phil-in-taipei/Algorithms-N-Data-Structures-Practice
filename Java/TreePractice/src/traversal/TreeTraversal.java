@@ -23,6 +23,7 @@ public class TreeTraversal {
         this.nodesInTreeData.add(treeNode.getData());
     }
 
+    // Memory trick: Bread 1st is queued from left to right
     public ArrayList<String> getBreadthFirstTreeData() {
         this.clearNodesInTreeData();
         Queue<TreeNode> queue = new LinkedList<>();
@@ -59,6 +60,7 @@ public class TreeTraversal {
         return this.nodesInTreeData;
     }
 
+    // Memory trick: depth is stacked from right to left
     public ArrayList<String> getDepthFirstTreeData() {
         this.clearNodesInTreeData();
         Stack<TreeNode> stack = new Stack<TreeNode>();
