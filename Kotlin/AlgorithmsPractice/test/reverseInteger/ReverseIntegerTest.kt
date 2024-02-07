@@ -14,4 +14,10 @@ class ReverseIntegerTest {
         assertEquals(test1.reverseIteratively(), 12892)
         assertEquals(test2.reverseIteratively(), 402892)
     }
+
+    @Test
+    fun reverseRecursively() {
+        assertEquals(test1.reverseRecursively(), 12892)
+        assertEquals(test2.reverseRecursively(), 402892)
+    }
 }

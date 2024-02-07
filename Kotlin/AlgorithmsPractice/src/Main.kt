@@ -86,9 +86,11 @@ fun main() {
     println("----------------------------------------------------------------------------------------------")
     println("Result: " + findMissingLetter1.getResult())
     println("----------------------------------------------------------------------------------------------")
-    println("Initializing reverse integer class with number 124")
     val reverseInt = ReverseInteger(123456)
+    println("Initializing reverse integer class with the following integer: ${reverseInt.getInt()}")
     println("----------------------------------------------------------------------------------------------")
-    println("Result: " + reverseInt.reverseIteratively())
+    println("Iterative Result: " + reverseInt.reverseIteratively())
+    println("----------------------------------------------------------------------------------------------")
+    println("Recursive Result: " + reverseInt.reverseRecursively())
     println("----------------------------------------------------------------------------------------------")
 }
