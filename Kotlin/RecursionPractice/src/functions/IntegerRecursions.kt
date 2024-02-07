@@ -16,11 +16,25 @@ fun getIntegersInRange(starting : Int, finishing : Int): IntArray {
     return getIntegersInRange(starting, finishing - 1) + finishing
 }
 
-fun sumOfIntegers(intArray: IntArray): Int {
+fun getFactorial(int: Int): Int {
+    if (int == 1) {
+        return int
+    }
+    return getFactorial(int - 1) * int
+}
+
+fun getFibonacci(index : Int): Int {
+    if (index == 1 || index == 2) {
+        return 1
+    }
+    return getFibonacci(index - 1) + getFibonacci(index - 2)
+}
+
+fun getSumOfIntegers(intArray: IntArray): Int {
     if (intArray.isEmpty()) {
         return 0;
     }
     val firstItem = intArray[0]
     val restOfArray = intArray.drop(1)
-    return sumOfIntegers(restOfArray.toIntArray()) + firstItem
+    return getSumOfIntegers(restOfArray.toIntArray()) + firstItem
 }
