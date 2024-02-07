@@ -78,4 +78,7 @@ fun main() {
     println("This is the output: $permutations")
 
     println("-----------------------------------------------------------------------------------------------------------")
+    println(reverseDigits(54321))
+    val recursivelyReverse = getReverseDigits(54321)
+    println(recursivelyReverse)
 }

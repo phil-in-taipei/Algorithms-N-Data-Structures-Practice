@@ -38,3 +38,28 @@ fun getSumOfIntegers(intArray: IntArray): Int {
     val restOfArray = intArray.drop(1)
     return getSumOfIntegers(restOfArray.toIntArray()) + firstItem
 }
+
+// note: the function below is iterative and just for reference
+fun reverseDigits(int: Int): Int {
+    var reversedInt = 0
+    var diminishingInt = int
+    while (diminishingInt != 0) {
+        reversedInt = (reversedInt * 10) + diminishingInt % 10
+        diminishingInt /= 10
+    }
+    return reversedInt
+}
+
+fun recursivelyReverseDigits(reversedInt: Int, diminishingInt: Int): Int {
+    if (diminishingInt == 0) {
+        return reversedInt
+    }
+    return recursivelyReverseDigits(
+        reversedInt = (reversedInt * 10) + diminishingInt % 10,
+        diminishingInt= diminishingInt/ 10
+    )
+}
+
+fun getReverseDigits(int: Int): Int {
+    return recursivelyReverseDigits(reversedInt=0, diminishingInt=int)
+}

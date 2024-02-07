@@ -53,6 +53,11 @@ class IntegerRecursionsKtTest {
     }
 
     @Test
+    fun getReverseDigits() {
+        assertEquals(getReverseDigits(865498), 894568)
+    }
+
+    @Test
     fun getSumOfIntegers() {
         assertEquals(
             getSumOfIntegers(intArrayOf(20, 42, 534, 97, 8, 12)),
