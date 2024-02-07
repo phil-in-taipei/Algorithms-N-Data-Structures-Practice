@@ -4,6 +4,7 @@ import fizzbuzz.FizzBuzz
 import allCharsAreUnique.AllCharsAreUnique
 import findMissing.FindMissingNumber
 import findMissing.FindMissingLetter
+import reverseInteger.ReverseInteger
 
 
 fun main() {
@@ -84,5 +85,10 @@ fun main() {
     val findMissingLetter1 = FindMissingLetter(charArrayOf('C', 'D', 'E', 'F', 'H', 'I'))
     println("----------------------------------------------------------------------------------------------")
     println("Result: " + findMissingLetter1.getResult())
+    println("----------------------------------------------------------------------------------------------")
+    println("Initializing reverse integer class with number 124")
+    val reverseInt = ReverseInteger(123456)
+    println("----------------------------------------------------------------------------------------------")
+    println("Result: " + reverseInt.reverseIteratively())
     println("----------------------------------------------------------------------------------------------")
 }
