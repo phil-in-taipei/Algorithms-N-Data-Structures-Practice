@@ -19,7 +19,10 @@ fun main() {
     println("---------------------------------------------------------------------------------------------")
     println("----------------------------------------------------------------------------------------------")
     println("Initializing array intersection class")
-    val arrayIntersection = ArrayIntersection(intArrayOf(1, 2, 3, 4, 5), intArrayOf(3, 4, 5, 6, 7)).getIntersectingValues()
+    val arrayIntersection = ArrayIntersection(
+                                intArrayOf(1, 2, 3, 4, 5),
+                                intArrayOf(3, 4, 5, 6, 7))
+                                    .getIntersectingValues()
     for (i in arrayIntersection) {
         println(i)
     }
