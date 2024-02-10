@@ -25,16 +25,16 @@ class Traverse(
     // depth stacked from right to left
     fun getDepthFirst(): ArrayList<String> {
         val treeNodes = arrayListOf<String>()
-        val stack = ArrayDeque<TreeNode>()
-        stack.add(root) // adds to the end
-        while(!stack.isEmpty()) {
-            val currentNode = stack.removeLast() // remove last for stack
+        val queue = ArrayDeque<TreeNode>()
+        queue.add(root) // adds to the end
+        while(!queue.isEmpty()) {
+            val currentNode = queue.removeLast() // remove last for stack
             treeNodes.add(currentNode.data)
             if (currentNode.right != null) {
-                stack.add(currentNode.right!!);
+                queue.add(currentNode.right!!);
             }
             if (currentNode.left != null) {
-                stack.add(currentNode.left!!);
+                queue.add(currentNode.left!!);
             }
         }
         return treeNodes
