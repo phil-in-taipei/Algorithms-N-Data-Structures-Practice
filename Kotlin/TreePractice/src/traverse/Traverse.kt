@@ -1,3 +1,5 @@
+package traverse
+
 import treeNode.TreeNode
 
 
@@ -10,7 +12,7 @@ class Traverse(
         val stack = ArrayDeque<TreeNode>()
         stack.add(root);
         while(!stack.isEmpty()) {
-            val currentNode = stack.removeFirst()
+            val currentNode = stack.removeFirst() // remove first for stack
             treeNodes.add(currentNode.data)
             if (currentNode.left != null) {
                 stack.add(currentNode.left!!);
@@ -28,7 +30,7 @@ class Traverse(
         val queue = ArrayDeque<TreeNode>()
         queue.add(root) // adds to the end
         while(!queue.isEmpty()) {
-            val currentNode = queue.removeLast() // remove last for stack
+            val currentNode = queue.removeLast() // remove last for queue
             treeNodes.add(currentNode.data)
             if (currentNode.right != null) {
                 queue.add(currentNode.right!!);

@@ -1,3 +1,5 @@
+import bst.BinarySearchTree
+import traverse.Traverse
 import treeNode.TreeNode
 
 fun main() {
@@ -24,5 +26,41 @@ fun main() {
     println("Breadth first: " + traversal.getBreadthFirst().toString())
 
     println("--------------------------------------------------------------------------------------")
+    println("Initializing binary search tree and inserting items")
+    val binarySearchTree = BinarySearchTree(root=null)
+    println("--------------------------------------------------------------------------------------")
+    println("This is the root: ${binarySearchTree.getRoot()}")
+    binarySearchTree.insert("F")
+    binarySearchTree.insert("S")
+    binarySearchTree.insert("C")
+    binarySearchTree.insert("H")
+    binarySearchTree.insert("V")
+    binarySearchTree.insert("A")
+    binarySearchTree.insert("M")
 
+    println("--------------------------------------------------------------------------------------")
+    binarySearchTree.printAll()
+    println("--------------------------------------------------------------------------------------")
+    println("This is the root: ${binarySearchTree.getRoot()}")
+    println("--------------------------------------------------------------------------------------")
+    val lookupC = binarySearchTree.lookup("C")
+    println("It contains C: ${lookupC?.data}")
+    println("--------------------------------------------------------------------------------------")
+    val lookupX = binarySearchTree.lookup("X")
+    println("It contains X: ${lookupX?.data}")
+    println("--------------------------------------------------------------------------------------")
+    println("Removing node C")
+    binarySearchTree.remove("C")
+    println("--------------------------------------------------------------------------------------")
+    binarySearchTree.printAll()
+    println("--------------------------------------------------------------------------------------")
+    println("This is the root: ${binarySearchTree.getRoot()}")
+    println("--------------------------------------------------------------------------------------")
+    println("Removing node F")
+    binarySearchTree.remove("F")
+    println("--------------------------------------------------------------------------------------")
+    binarySearchTree.printAll()
+    println("--------------------------------------------------------------------------------------")
+    println("This is the root: ${binarySearchTree.getRoot()}")
+    println("--------------------------------------------------------------------------------------")
 }

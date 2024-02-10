@@ -1,4 +1,7 @@
+package traverse
+
 import org.junit.jupiter.api.Assertions.*
+import traverse.Traverse
 import treeNode.TreeNode
 
 class TraverseTest {
